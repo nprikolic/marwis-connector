@@ -1,5 +1,10 @@
 # MARWIS desktop GUI logger — plan
 
+> **Status: implemented** in [`desktop/marwis_gui.py`](../desktop/marwis_gui.py).
+> One change from this plan: each Record session writes its own UTC-timestamped
+> file `data/marwis_YYYYMMDD_HHMMSSZ.sqlite` (runs never overwrite or mix),
+> rather than appending to a single fixed `data/marwis.sqlite`.
+
 A lean **Tkinter** single-window app: the GUI version of `desktop/marwis_monitor.py`.
 Connect to the MARWIS over the Bluetooth COM port, watch live connection health
 and readings, and toggle data saving on/off. This is the active build path; the

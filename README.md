@@ -9,8 +9,9 @@ All targets share one protocol (UMB over the Bluetooth COM port):
 - **`desktop/`** — the working Python tools (Windows COM port). Proven and
   complete: `marwis_logger.py` (unattended) and `marwis_monitor.py` (live monitor
   + on-demand saving).
-- **GUI logger** — the **active build path**: a lean Tkinter window wrapping the
-  same logic (live monitoring + save toggle + phone-location reminder). Plan in
+- **GUI logger** (`desktop/marwis_gui.py`) — **built and working**: a lean
+  Tkinter window wrapping the same logic (live monitoring + save toggle +
+  phone-location reminder). Plan in
   [`docs/GUI_LOGGER_PLAN.md`](docs/GUI_LOGGER_PLAN.md), build prompt in
   [`docs/GUI_LOGGER_BUILD_PROMPT.md`](docs/GUI_LOGGER_BUILD_PROMPT.md).
 - **`android/`** — *parked.* A phone app was scoped (`docs/ANDROID_*`) but the
@@ -23,7 +24,7 @@ All targets share one protocol (UMB over the Bluetooth COM port):
 desktop/                 Python tools
   marwis_logger.py         unattended/always-on logger (UMB protocol + storage)
   marwis_monitor.py        live monitor + on-demand saving (console)
-  marwis_gui.py            lean Tkinter GUI logger (to be built — active path)
+  marwis_gui.py            lean Tkinter GUI logger (live monitor + save toggle)
   capture.py               one-shot labelled fixture capture
   discover_channels.py     enumerate device channels (UMB 0x2D)
   test_marwis_logger.py    offline protocol tests (documented frame vectors)
@@ -179,6 +180,35 @@ Saving is lazy: `marwis.sqlite` (and `--csv` if given) isn't created until the
 first time you press `s`. Other flags: `--interval`, `--channels`, `--csv`,
 `--save-on-start` (begin recording immediately). Use `marwis_monitor.py` for
 interactive sessions and `marwis_logger.py` for unattended/always-on logging.
+
+## GUI logger (desktop window)
+
+```
+python desktop/marwis_gui.py
+```
+
+A single Tkinter window — the graphical equivalent of `marwis_monitor.py`,
+reusing all of `marwis_logger.py`'s protocol and storage logic (no
+reimplementation). It starts **monitoring only — not saving**.
+
+- **Connection row** — enter the COM port (default `COM5`) and poll interval
+  (default `1.0` s), then **Connect**; a status pill shows Connected/Disconnected.
+- **Link health** — link up/down, last-poll latency, device-reported Bluetooth
+  signal (channels 4040 dBm / 4041 %), and poll count + success rate.
+- **Readings** — cards for road/air/dew temperature, humidity, water film (600)
+  and film on surface (601), friction, ice, and a road-condition badge. A
+  water-film channel pinned to its 6000 µm range max shows **OVER-RANGE** (the
+  raw value is still stored — see `docs/reference/captures/README.md`).
+- **Record** — toggles saving on/off without dropping the link. Turning it on
+  pops a reminder to start location logging on your phone (the laptop has no GPS;
+  `lat`/`lon` stay NULL and you join on the UTC timestamp afterward).
+
+**Per-session files:** each Record session writes its own UTC-timestamped SQLite
+file in `data/` — `marwis_YYYYMMDD_HHMMSSZ.sqlite` — so runs never overwrite or
+mix. Tick **Also write CSV** to additionally write a matching `.csv` alongside
+it. The folder is created on first record. Architecture: a daemon worker thread
+owns the serial port and poll loop; the Tk thread drains a queue and does all
+widget/SQLite work, so serial I/O never blocks the UI.
 
 ## Storage schema (extensible for georeferencing)
 
