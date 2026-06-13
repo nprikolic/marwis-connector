@@ -1,5 +1,9 @@
 # MARWIS connector — log Lufft MARWIS data without ViewMondo
 
+<p align="center">
+  <img src="docs/marwis_gui.png" alt="MARWIS GUI logger — live link health and readings" width="640">
+</p>
+
 Self-hosted logging of measurement data from a Lufft MARWIS-UMB road weather
 sensor over Bluetooth, bypassing the official app and the paid ViewMondo/
 SmartView server.
