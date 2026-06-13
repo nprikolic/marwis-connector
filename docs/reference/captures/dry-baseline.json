@@ -1,0 +1,190 @@
+{
+  "label": "dry-baseline",
+  "ts_utc": "2026-06-13T08:21:41+00:00",
+  "device_addr": "0xa001",
+  "latency_ms": 229.9,
+  "request_hex": "011001a001f02b022f1014640069006e00730078007d00c800d20058025d02620259025e0263026402200334038403a00fa10f03208a04",
+  "response_hex": "011001f001a0b1022f1000140800640016000494410800690016669b824208006e0016af79ad4108007300165c108e42080078001632e3184108007d0016a3cc44420800c80016d80360420800d200162882324208005802160000000008005d02160000000008006202160000000008005902160000000008005e021600000000080063021600000000080064021600000000080020031600000000080034031686eb513f0500840310000600a00f1200000600a10f12000003e56704",
+  "channels": [
+    {
+      "channel": 100,
+      "name": "road_surface_temp",
+      "unit": "degC",
+      "status": 0,
+      "type": "float32",
+      "value": 18.501953125,
+      "raw_hex": "0064001600049441"
+    },
+    {
+      "channel": 105,
+      "name": "road_surface_temp",
+      "unit": "degF",
+      "status": 0,
+      "type": "float32",
+      "value": 65.30351257324219,
+      "raw_hex": "00690016669b8242"
+    },
+    {
+      "channel": 110,
+      "name": "ambient_temp",
+      "unit": "degC",
+      "status": 0,
+      "type": "float32",
+      "value": 21.684415817260742,
+      "raw_hex": "006e0016af79ad41"
+    },
+    {
+      "channel": 115,
+      "name": "ambient_temp",
+      "unit": "degF",
+      "status": 0,
+      "type": "float32",
+      "value": 71.03195190429688,
+      "raw_hex": "007300165c108e42"
+    },
+    {
+      "channel": 120,
+      "name": "dew_point_temp",
+      "unit": "degC",
+      "status": 0,
+      "type": "float32",
+      "value": 9.55546760559082,
+      "raw_hex": "0078001632e31841"
+    },
+    {
+      "channel": 125,
+      "name": "dew_point_temp",
+      "unit": "degF",
+      "status": 0,
+      "type": "float32",
+      "value": 49.1998405456543,
+      "raw_hex": "007d0016a3cc4442"
+    },
+    {
+      "channel": 200,
+      "name": "rel_humidity_at_road_temp",
+      "unit": "%",
+      "status": 0,
+      "type": "float32",
+      "value": 56.003753662109375,
+      "raw_hex": "00c80016d8036042"
+    },
+    {
+      "channel": 210,
+      "name": "rel_humidity",
+      "unit": "%",
+      "status": 0,
+      "type": "float32",
+      "value": 44.627105712890625,
+      "raw_hex": "00d2001628823242"
+    },
+    {
+      "channel": 600,
+      "name": "water_film_height",
+      "unit": "um",
+      "status": 0,
+      "type": "float32",
+      "value": 0.0,
+      "raw_hex": "0058021600000000"
+    },
+    {
+      "channel": 605,
+      "name": "water_film_height",
+      "unit": "mil",
+      "status": 0,
+      "type": "float32",
+      "value": 0.0,
+      "raw_hex": "005d021600000000"
+    },
+    {
+      "channel": 610,
+      "name": "water_film_height",
+      "unit": "mm",
+      "status": 0,
+      "type": "float32",
+      "value": 0.0,
+      "raw_hex": "0062021600000000"
+    },
+    {
+      "channel": 601,
+      "name": "water_film_surface",
+      "unit": "um",
+      "status": 0,
+      "type": "float32",
+      "value": 0.0,
+      "raw_hex": "0059021600000000"
+    },
+    {
+      "channel": 606,
+      "name": "water_film_surface",
+      "unit": "mil",
+      "status": 0,
+      "type": "float32",
+      "value": 0.0,
+      "raw_hex": "005e021600000000"
+    },
+    {
+      "channel": 611,
+      "name": "water_film_surface",
+      "unit": "mm",
+      "status": 0,
+      "type": "float32",
+      "value": 0.0,
+      "raw_hex": "0063021600000000"
+    },
+    {
+      "channel": 612,
+      "name": "snow_height",
+      "unit": "mm",
+      "status": 0,
+      "type": "float32",
+      "value": 0.0,
+      "raw_hex": "0064021600000000"
+    },
+    {
+      "channel": 800,
+      "name": "ice_percentage",
+      "unit": "%",
+      "status": 0,
+      "type": "float32",
+      "value": 0.0,
+      "raw_hex": "0020031600000000"
+    },
+    {
+      "channel": 820,
+      "name": "friction",
+      "unit": "",
+      "status": 0,
+      "type": "float32",
+      "value": 0.8200000524520874,
+      "raw_hex": "0034031686eb513f"
+    },
+    {
+      "channel": 900,
+      "name": "road_condition",
+      "unit": "code",
+      "status": 0,
+      "type": "uint8",
+      "value": 0,
+      "raw_hex": "0084031000"
+    },
+    {
+      "channel": 4000,
+      "name": "device_status",
+      "unit": "bitfield",
+      "status": 0,
+      "type": "uint16",
+      "value": 0,
+      "raw_hex": "00a00f120000"
+    },
+    {
+      "channel": 4001,
+      "name": "measurement_status",
+      "unit": "bitfield",
+      "status": 0,
+      "type": "uint16",
+      "value": 0,
+      "raw_hex": "00a10f120000"
+    }
+  ]
+}

@@ -1,0 +1,1396 @@
+                                   MARWIS Mobile Advanced Road Weather
+                                           Information Sensor
+                                                Operational Manual
+48.7230-MarwisE | V1.0 (08/2024)
+Copyright © OTT HydroMet Fellbach GmbH
+
+
+
+
+OTT HydroMet Fellbach GmbH
+Gutenbergstr. 20
+70736 Fellbach
+Germany
+
+
++49 711 51822 -0
+met-info@otthydromet.com
+www.otthydromet.com
+
+
+All rights reserved.
+
+
+All content is the intellectual property of OTT HydroMet. Reprinting, duplication
+and translation (even as excerpts) are only permitted with the prior written
+consent of OTT HydroMet.
+
+
+Subject to technical change.
+Table of contents
+
+1       Scope of supply                                    5
+
+
+2       Order numbers and variant code                     6
+2.1     Product variants                                   6
+2.2     Accessories and spare parts                        6
+
+
+3       About this manual                                  7
+3.1     Other applicable documents and software            7
+3.2     General signs and symbols                          7
+3.3     Explanation of warnings                            8
+
+
+4       General safety instructions                        9
+4.1     Intended use                                       9
+4.2     Potential misuse                                   9
+4.3     Personnel qualification                            9
+4.4     Operator obligations                               9
+4.5     Personnel obligations                              9
+4.6     Correct handling                                   9
+4.7     Health hazards                                    10
+4.7.1   Risk of electrical shock                          10
+4.8     Installation and maintenance on a vehicle         10
+4.9     Using long cables                                 10
+4.10   Certification                                      10
+4.10.1 Europe, USA and Canada                             10
+
+
+5       Product description                               12
+5.1     Design and function                               12
+5.2     Product overview                                  12
+5.2.1   Status LEDs                                       12
+
+
+6       Transport, storage, and unpacking                 14
+6.1     Unpacking                                         14
+6.2     Storage                                           14
+
+
+7       Installation                                      15
+7.1     Mechanical installation                           15
+7.1.1   Required tools and aids                           15
+7.1.2   Preparing installation                            15
+7.1.3   Installing device                                 15
+7.1.4   Mounting device                                   16
+7.2     Electrical installation                           18
+
+
+
+
+                                                    <3>
+7.2.1   Electrical connections                        18
+7.2.2   Supply voltage                                18
+7.2.3   RS485 interface                               19
+7.2.4   Connecting with Bluetooth                     19
+7.2.5   CAN interface                                 19
+
+
+8       Commissioning                                 20
+8.1     Selecting the road condition model            20
+8.2     Adaption of the sensor                        20
+8.3     Configuration and testing                     21
+8.3.1   Factory settings                              21
+8.4     CAN protocol                                  22
+8.4.1   Data transmission                             22
+8.4.2   Remote query                                  23
+8.4.3   Trigger configuration                         23
+8.4.4   Status and error codes                        25
+8.4.5   Data types                                    26
+
+
+9       Maintenance                                   27
+9.1     Cleaning the sensor front glass pane          27
+9.2     Checking the bolted connections               27
+9.3     Updating firmware                             27
+9.4     Replacing temperature/humidity sensor         27
+
+
+10      Troubleshooting                               28
+10.1   Error elimination                              28
+10.1.1 Interfering factors                            28
+
+
+11      Repair                                        30
+11.1    Customer support                              30
+
+
+12      Notes on disposing of old devices             31
+
+
+13      Technical data                                32
+13.1    General technical data                        32
+13.2    Electrical data                               32
+13.3    Data transfer                                 32
+13.4    Dimensions and weight                         32
+13.5    Measuring range and accuracy                  33
+
+
+
+
+                                                <4>
+1 Scope of supply
+
+The following items are included with delivery:
+ – Mobile Advanced Road Weather Information Sensor (MARWIS)
+
+
+
+
+                                                  <5>
+2 Order numbers and variant code
+
+2.1 Product variants
+
+Variant                                                  Order number
+MARWIS-UMB, 1 m (3 1/4 ft) distance to the ground       8900.U03
+MARWIS-UMB, 2 m (6 1/2 ft) distance to the ground       8900.U04
+MARWIS-UMB, 0.5 m (1 3/4 ft) distance to the ground     8900.U05
+
+
+2.2 Accessories and spare parts
+
+Item                                                     Order number
+Protective housing short (recommended for mounting      8900.G01
+on passenger car)
+Protective housing long (recommended for mounting on 8900.G02
+lorry)
+Assembly kit magnetic bar carrier (horizontal)          8900.G01H
+Assembly kit magnetic bar carrier (vertical)            8900.G01V
+Additional magnetic fastener for 8900.G01H or           8900.G01M
+8900.G01V
+Lufft sensor cable 15 m                                 8371.UK015
+Connection cable 5 m (with 12 V car adapter for cigarette 8900.UK05
+lighter)
+Connection cable 10 m (with 12 V car adapter for        8900.UK10
+cigarette lighter)
+Connector without cable                                 8371.UST1
+Temperature humidity sensor                             8900.UTFF
+MARWIS hitch carrier                                    8900.MHC
+MARWIS cloud gate modem                                 8900.MOD
+MARWIS cloud gate box                                   8900.Box-US
+
+
+
+
+                                                      <6>
+3 About this manual
+
+3.1 Other applicable documents and software
+The following documents contain further information on installation, maintenance and calibration:
+ – MARWIS-App manual
+
+
+The following documents and software can be downloaded at www.otthydromet.com:
+ – ConfigTool.NET
+ – UMB protocol description
+ – Firmware
+
+
+The following App can be downloaded from iTunes or Google Playstore:
+ – MARWIS-App for iOS or Android
+
+
+
+
+MARWIS Android App for Android 6-9
+
+
+
+
+MARWIS Android App for Android 10 and newer
+
+
+3.2 General signs and symbols
+The signs and symbols used in the operational manual have the following meaning:
+
+
+Practical tip
+
+
+ i       This symbol indicates important and useful information.
+
+
+
+Action
+ ü Prerequisite that must be met before performing an action.
+ 4 Step 1
+       ð Intermediate result of an action
+ 4 Step 2
+ ð Result of a completed action
+
+
+List
+ – List item, 1st level
+       – List item, 2nd level
+
+
+
+
+                                                         <7>
+3.3 Explanation of warnings
+To avoid personal injury and material damage, you must observe the safety information and warnings in the
+operating manual. The warnings use the following danger levels:
+
+
+       WARNING
+
+WARNING
+This indicates a potentially hazardous situation. If the hazardous situation is not avoided, it may result in death or
+serious injuries.
+
+
+       CAUTION
+
+CAUTION
+This indicates a potentially hazardous situation. If the hazardous situation is not avoided, it may result in
+moderately serious or minor injuries.
+
+
+       NOTICE
+NOTE
+This indicates a situation from which damage may arise. If the situation is not avoided, products may be damaged.
+
+
+
+
+                                                          <8>
+4 General safety instructions
+
+4.1 Intended use
+The mobile advanced road weather information senor (MARWIS-UMB) is used to measure various values to
+determine the corresponding road conditions. The sensor is mounted on vehicles.
+
+
+4.2 Potential misuse
+Any use of the product that does not comply with the intended use, be this intentional or negligent, is forbidden by
+the manufacturer.
+ 4 Use the product only as described in the operational manual.
+
+
+4.3 Personnel qualification
+The equipment described in this manual must be installed, operated, maintained and repaired by qualified
+personnel only.
+ 4 Obtain training from OTT HydroMet if necessary.
+
+
+4.4 Operator obligations
+The installer is responsible for observing the safety regulations. Unqualified personnel working on the product can
+cause risks that could lead to serious injury.
+ 4 Have all activities carried out by qualified personnel.
+ 4 Ensure that everybody who works on or with the product has read and understood the operational manual.
+ 4 Ensure that safety information is observed.
+ 4 File the operational manual together with the documentation of the entire system and ensure that it is
+   accessible at all times.
+ 4 The operational manual is part of the product, forward the operational manual together with the product.
+
+
+4.5 Personnel obligations
+To avoid equipment damage and injury when handling the product, personnel are obliged to the following:
+ 4 Read the operational manual carefully before using the product for the first time.
+ 4 Pay attention to all safety information and warnings.
+ 4 If you do not understand the information and procedure explanations in this manual, stop the action and
+   contact the service provider for assistance.
+ 4 Wear the necessary personal protective equipment.
+
+
+4.6 Correct handling
+If the product is not installed, used and maintained correctly, there is a risk of injury. The manufacturer does not
+accept any liability for personal injury or material damage resulting from incorrect handling.
+ 4 Install and operate the product under the technical conditions described in the operational manual.
+ 4 Do not change or convert the product in any way.
+ 4 Do not perform any repairs yourself.
+ 4 Get OTT HydroMet to examine and repair any defects.
+ 4 Ensure that the product is correctly disposed of. Do not dispose of it in household waste.
+
+
+
+
+                                                         <9>
+4.7 Health hazards
+
+
+4.7.1 Risk of electrical shock
+Live parts can cause electric shocks in the event of contact.
+ 4 Never take measurements on live electrical parts.
+ 4 Never touch live electrical parts.
+
+
+4.8 Installation and maintenance on a vehicle
+When the device is installed and maintained on a vehicle, special safety measures must be taken to avoid personal
+injury.
+ 4 Observe and follow the local safety regulations.
+ 4 Use suitable safety equipment.
+ 4 Inspect the safety equipment before use.
+ 4 Secure the device to ensure it doesn't fall during the installation process.
+
+
+4.9 Using long cables
+Long cables are required to mount the product at longer distance. Therefore, there is a risk of strangulation.
+ 4 Use long cables properly.
+ 4 Observe manufacturer's instructions.
+ 4 Observe safety regulations.
+
+
+4.10 Certification
+
+
+4.10.1 Europe, USA and Canada
+
+
+CE (EU)
+The equipment meets the essential requirements of RED Directive 2014/53/EU.
+
+
+FCC (US)
+
+
+FCC part 15 statement
+This device complies with part 15 of the FCC Rules. Operation is subject to the following two conditions:
+1. This device may not cause harmful interference.
+2. This device must accept any interference received, including interference that may cause undesired operation.
+
+
+ i     Unauthorized modification or changes to this wireless communication equipment will void the right to use
+       it. Changes or modifications to this unit not expressly approved by the party responsible for compliance will
+       void the user’s authority to operate the equipment. Any change to the equipment will void the FCC grant.
+
+Contains FCC ID: PVH0946
+
+
+
+
+                                                         <10>
+IC (CA)
+
+
+Canadian Radio Interference-Causing Equipment Regulation, ICES-001
+The device complies with Industry Canada license-exempt RSS standard(s). Operation is subject to the following
+two conditions:
+1. This device may not cause harmful interference.
+2. This device must accept any interference, including interference that may cause undesired operation of the
+   device.
+
+
+Le présent appareil est conforme aux CNR d’ industrie Canada applicable aux appareils radio exempts de licence.
+L’exploitation est autorisée aux deux conditions suivantes:
+1. L’appareil ne doit pas produire de brouillage.
+2. L’utilisateur de l’ appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est
+   susceptible d’en compromettre le fonctionnement.
+
+
+ i        La modification ou les changements non autorisée à cet équipement de communication sans fil annuleront
+          la droite pour I’utiliser. Les changements ou les modifications à cette unité pas expressément approuvé par
+          le parti responsable de la conformité annuleront l’autorité de l’utilisateur pour fonctionner l’équipement.
+          N’importe quel changement à l’équipement annulera la certification de Canada d’industrie.
+
+Contains IC: 5325A-0946
+
+
+
+
+                                                          <11>
+5 Product description
+
+5.1 Design and function
+The meteorological network sensors are used for road weather monitoring. The device measures the surface
+temperature, ambient temperature and humidity, relative humidity at surface temperature, water film height and
+snow height on the road by means of non-invasive optical spectroscopy and a pyrometer. Thus the device can be
+used for the acquisition of a variety of measurement variables to determine the corresponding road conditions
+relevant for winter maintenance services.
+
+
+The equipment is connected by way of an 8-pin plug-in terminal and associated connection cable (length 5 m or
+15 m). The measured values are requested over the RS-485 interface in accordance with UMB protocol. During
+commissioning, configuration and verification takes place using the ConfigTool.NET software or the MARWIS-App.
+
+
+5.2 Product overview
+
+
+                       3     4
+                   2               5
+           1
+
+
+
+
+                                                      6
+
+
+
+
+            7
+
+1      Pyrometer                                            5    Temperature-humidity-sensor
+2      Transmitters                                         6    Lateral temperature sensor
+3      Receivers                                            7    Connection plug
+4      Status-LED
+
+
+5.2.1 Status LEDs
+The status LEDs give information on how the device is operating. The following table describes the different colors
+and states of the LEDs.
+
+ Color                              Description
+Green                               – Device status OK
+                                    – Infrared measurement active
+Blue                                – Device status OK
+                                    – Infrared measurement active, active Bluetooth connection
+Yellow                              – Device status OK
+                                    – Error in infrared measurement (e.g. operating temperature has not yet
+                                      been reached in the warm-up phase)
+                                    – The status channel measurement status provides detailed information about
+                                      the type of error
+Magenta                             – Firmware update active
+
+
+
+
+                                                          <12>
+Color                             Description
+                                   – Do not separate sensor from power supply!
+Red                                – Device error
+                                   – The status channel device status provides detailed information about the
+                                     type of error
+Blinking (any color)               – Data transfer is currently taking place
+
+
+The status of the device and the measurement can also be retrieved via UMB channels 4000 and 4001.
+
+
+
+
+                                                      <13>
+6 Transport, storage, and unpacking
+
+6.1 Unpacking
+4 Carefully remove the product from the packaging.
+4 Check that the delivery is complete and undamaged.
+4 If you find any damage or if the delivery is incomplete, then immediately contact your supplier or
+  manufacturer.
+4 Keep the original packaging for any further transportation.
+
+
+6.2 Storage
+4 Store within specified temperature ranges.
+4 Store in dry area.
+4 Store in original box where possible.
+
+
+
+
+                                                      <14>
+7 Installation
+
+7.1 Mechanical installation
+
+
+7.1.1 Required tools and aids
+The following tools and aids are required:
+ – wrench, 8 mm
+ – Allen key, 4 mm
+ – Screw driver
+
+
+7.1.2 Preparing installation
+ 4 Ensure the following before installing the device on a vehicle:
+ – The field of view of the device is directed to the road
+ – The area between the sensor front and the road should be free of obstacles
+ – The device should not be affected by heat from exhaust fumes of the vehicle
+ – The device should not be installed straight above the tyres since the risk of spume soiling of the device's glass
+   front is elevated which could affect the measurement of the water film height
+
+
+7.1.3 Installing device
+
+
+
+
+                            1.60 m - 2.20 m
+  1.50 m - 2.07 m
+                      20°
+
+
+
+
+                90°
+
+
+Example: Mounting 8900.U04 with short protective housing at an angle of 20°
+
+
+
+
+                                                          0.35 m - 0.65 m
+                            0.33 m - 0.61 m
+                                                    20°
+
+
+                                              90°
+
+
+Example: Mounting 8900.U05 on the hitch carrier
+
+ 4 Install the device on a vehicle, either on top or on the hitch carrier.
+
+
+
+
+                                                                    <15>
+ 4 Keep the distance between the sensor glass and the road surface in the range listed in the table below.
+ 4 Align the sensor with the road with the inclination angle of 20° or 10°, depending on the housing, see following
+   table:
+
+ Value              8900.U03, short    8900.U04, short     8900.U05, short    8900.U03, long     8900.U04, long
+                    protective         protective          protective         protective         protective
+                    housing,           housing,            housing,           housing,           housing,
+                    angle 20°          angle 20°           angle 20°          angle 10°          angle 10°
+Minimal height     75 cm (29 ½ in)    150 cm (59 in)       33 cm (13 in)     79 cm (31 ⅛ in)    157 cm (62 in)
+Measuring        80 cm (31 ½ in)      160 cm (63 in)       35 cm (13 ¾ in)   80 cm (31 ½ in)    160 cm (63 in)
+distance minimal
+height
+Ideal height       96 cm (37 ¾ in)    188 cm (74 in)       47 cm (18 ½ in)   98 cm (38 ⅝ in)    197 cm
+Measuring          100 cm (39 ⅜ in)   200 cm (78 ¾ in)     50 cm (19 ¾ in)   100 cm (39 ⅜ in)   200 cm (78 ¾ in)
+distance ideal
+height
+Maximum height 141 cm (55 ½ in)       207 cm (81 ½ in)     61 cm (24 in)     148 cm (58 ½ in)   217 cm
+Measuring      150 cm (59 in)         220 cm (86 ⅝ in)     65 cm (25 ⅝ in)   150 cm (59 in)     220 cm (86 ⅝ in)
+distance
+maximum height
+
+
+Note: The tolerance which still allows for plausible measurement values amounts to -20 cm / +50 cm (-8 in / +
+19 ¾ in) in case of instrument 8900.U03, -40 cm / +20 cm (-15 ¾ in / +8 in) for instrument 8900.U04.
+
+
+7.1.4 Mounting device
+The protective housing must be connected to the device.
+
+
+
+
+                                                         <16>
+                                                   1
+
+
+
+
+                                                   2
+
+
+
+                                                   3
+
+
+
+
+                                                   4
+
+
+
+
+                                                   5
+
+
+
+
+1    Screws                                                4    MARWIS-UMB
+2    Plastic bars                                          5    Protective housing
+3    Clamp straps
+
+
+4 Loosen the screws (1) on the upper side of the device and take off the plastic stripes.
+4 Place the clamp straps (3) so that the profiles of the two clamp straps fit in with the dents on the upper side of
+  the device.
+4 Mount the plastic bars (4) of the clamping device on the device.
+4 Insert the screws and tighten the screws appropriately.
+4 Place the device (4) on the protective housing (5).
+4 Then the ends of the clamp straps come close to the hitch of the housing.
+4 Press the clamp straps towards the protective housing with a screw driver, until they catch the hitch.
+    ð The device is connected to the protective housing.
+4 Fasten one clamp strap on both sides, then the other.
+
+
+
+
+                                                        <17>
+7.2 Electrical installation
+
+
+7.2.1 Electrical connections
+
+       WARNING
+
+Electric shock due to incorrectly connected device!
+If the device is not connected correctly, it may be permanently damaged and an electric shock may result.
+ 4 Ensure that the device is connected correctly.
+ 4 Ensure that the cable shielding is connected to the chassis of the vehicle.
+ 4 Ensure that the MARWIS-UMB is protected with a 5 A fuse.
+
+
+There is an 8-pin screw plug on the front side of the protective housing. This serves to connect the supply voltage
+and the interface via the connection cable.
+
+
+
+
+                                              2
+                                       5     4
+                                      3       1
+                                       7   8 6
+
+
+
+
+Pin assignment
+
+ Number      Color             Assignment
+1           Pink               CAN-HIGH
+2           Yellow             RS-485_B
+3           Red                Not connected
+4           Grey               CAN-LOW
+5           Green              RS-485_A (+)
+6           Blue               Not connected
+7           White              Negative supply voltage
+8           Brown              Positive supply voltage
+
+
+7.2.2 Supply voltage
+The minimum supply voltage for the device is 10 V DC ± and the maximum is 28 V DC. Operation with a supply
+voltage of 24 V DC is recommended.
+
+
+ i     If the temperatures are below -10 °C and you are using a supply voltage of 12 V, a step-up converter from
+       12 V to 24 V should be used to ensure the heating capacity. The heating of the unit is optimal, when the
+       sensor indicates yellow. If a connection cable 5 m for cigarette lighter (with 12 V) is used, it is advised to
+       install a DC converter close to the sensor to prevent the sensor from freezing in very cold environment.
+
+
+
+
+                                                         <18>
+7.2.3 RS485 interface
+The device has an electrically isolated, half-duplex, 2 wire RS485 interface for configuration, measurement polling
+and the firmware update. The RS485 interface has a default baud rate of 19200 (no parity, 8 data bits, 1 stop bit),
+but other baud rates are supported (adjustable baud rates: 1200, 2400, 4800, 9600, 14400, 28800, 57600, 115200).
+
+
+ i     For sampling rates up to 1/s a bit rate of 19200 baud will usually be sufficient; for higher sampling rates
+       please select 115200 baud.
+
+
+7.2.4 Connecting with Bluetooth
+ 4 Switch on the MARWIS-UMB by connecting the power supply.
+ 4 Locate the MARWIS-UMB in the Bluetooth settings of your device.
+     ð The first two sections of the serial number define the name of the connection.
+ 4 Connect the MARWIS-UMB with your device.
+     ð The default PIN of every MARWIS-UMB is 1007
+ 4 If you are using the UMB Config Tool, select the COM port for communicating with the MARWIS-UMB that has
+   been assigned to your Bluetooth connection during the setup.
+
+
+ i     To ensure a stable Bluetooth connection, keep the distance between the sensor and the display device
+       (tablet or smartphone) as short as possible.
+
+
+7.2.5 CAN interface
+The device can communicate over the CAN interface. The CAN interface has a bit rate of 500 kBps. Extented CAN-
+IDs (EID) are used.
+
+
+Each end of the CAN bus should be terminated by a 120 Ohm resistance.
+
+
+ i     Further information on the CAN protocol can be found in the chapter CAN protocol [} 22].
+
+
+
+Pin assignment
+
+ Number                 Assignment
+1                       CAN-High
+4                       CAN-Low
+
+
+
+
+                                                        <19>
+8 Commissioning
+
+8.1 Selecting the road condition model
+Before you can start the adaptation of the sensor, you must first select a road condition model.
+ ü The MARWIS-App is installed on your device and connected to the MARWIS-UMB.
+ 4 In the MARWIS-App, select a road condition model when configurating your MARWIS-UMB.
+ð This setting determines whether the next measurement retrieval uses the maximum, minimum, or average
+  values recorded for the measurements road temperature, water film height and ice percentage.
+
+
+There are 7 presets to choose from:
+
+ Road condition model         Road temperature              Water film height           Ice percentage
+AVG (default)                 Average                       Average                     Average
+Winter 1                      Minimum                       Maximum                     Maximum
+Winter 2                      Average                       Average                     Maximum
+Winter 3                      Minimum                       Average                     Maximum
+Winter 4                      Minimum                       Average                     Average
+Summer 1                      Average                       Maximum                     Minimum
+Summer 2                      Average                       Average                     Minimum
+
+
+8.2 Adaption of the sensor
+The sensor has to be adapted separately for each vehicle.
+
+
+During the adaptation of the sensor the following conditions must be met:
+ ü The MARWIS-UMB is installed in the planned position on the measuring vehicle.
+ ü The adaptation takes place on a dry stretch of road.
+ ü The vehicle is stationary during the adaptation.
+ ü The ambient temperature is below 30 °C (85 °F).
+ ü The adaptation is carried out in natural light.
+ ü The MARWIS-UMB has been switched on for about 5 minutes before starting the adaptation to allow for warm-
+   up.
+ ü The yellow light is off and the status LED indicates green on the device and MARWIS-App.
+ ü Each MARWIS-UMB in the same network has received its own device ID.
+ ü The selected road surface for the adaptation represents the area where the MARWIS-UMB will be used.
+ 4 Carry out the adaption of the sensor with the MARWIS-App on your iOS or Android device or with the program
+   ConfigTool.Net on a Windows PC.
+   Detailed instructions are given in the manual of the MARWIS-App or the ConfigTool.Net.
+     ð Basic settings are configured which depend on the structure of the ground, the measuring angle and the
+       exact measuring distance between the MARWIS-UMB and the road.
+ 4 Optionally, you can save your profile of the adaption in the MARWIS-UMB. Up to 5 different profiles can be
+   stored.
+
+
+
+
+                                                        <20>
+ i       When saving different profiles, name them in a way that reflects relevant conditions. For example, including
+         the vehicle name or licence plate in the profile can provide insights into the installation height during the
+         adaptation.
+
+
+ i       Restarting the MARWIS-UMB after adaptation has been completed, has no influence on the measurements.
+         The last used adaption profile is automatically loaded.
+
+
+ i       In vehicles with a stop-start system, the cigarette lighter loses power during startup. If the MARWIS-UMB is
+         powered from the cigarette lighter, this may cause a reset and lead to data gaps.
+
+
+8.3 Configuration and testing
+For configuration and testing OTT HydroMet Fellbach GmbH provides the proprietary software ConfigTool.NET.
+ConfigTool.NET can also be used to update the firmware of the device.
+ 4 Download the ConfigTool.NET software: www.otthydromet.com/en/software_firmware
+ 4 Install the software on the computer.
+ 4 Get familiar with the software in general.
+ 4 Ensure to always use the latest version of ConfigTool.NET.
+ 4 During configuration and testing, disconnect other devices that poll the UMB-Bus, e.g. modem or LCOM.
+ 4 Ensure that the connection settings of ConfigTool.NET are conform to the settings of the device.
+
+
+ i       The operation of the ConfigTool.NET is described in detail in the help function of the Windows® PC software.
+         For this reason only the menus and functions specific to the device are described below.
+
+
+ i       The configuration can also be carried out in the MARWIS-App on an iOS or Android device.
+
+
+
+8.3.1 Factory settings
+The device is delivered with the following settings:
+
+ Specification                             Value
+Class ID                                   10 (cannot be modified)
+Device ID                                  1 (gives address A001h = 40961)
+Baud rate                                  19200
+RS485 protocol                             UMB binary
+Water film damp threshold                  10 μm
+Water film wetness threshold               100 µm
+Critical temperature for ice detection     1,5 °C
+Temperature offset                         0K
+Surface type                               Asphalt
+Measuring interval MARWIS-UMB              0,1 s
+Deicer                                     NaCl
+Road condition model                       AVG
+
+
+
+ i       If several MARWIS-UMB are operated in one UMB network, the device ID must be changed as each device
+         requires a unique ID.
+
+
+
+
+                                                         <21>
+ i       When connecting via the RS485 interface, ensure no other device operates as the master, as the PC takes on
+         the master role.
+
+
+ i       If the baud rate is changed, the sensor communicates at the new baud rate after the configuration has been
+         saved on the sensor. Ensure that your retrieving system supports the changed baud rate.
+
+
+8.4 CAN protocol
+All MARWIS measuring channels can communicate over the CAN interface. Each value will be sent in its own CAN
+telegram.
+
+
+In order to transfer a measured value it is either possible to send a remote telegram which will cause the value to
+be transferred once or to configure a trigger so that the value is sent automatically time and time again. In this
+latter case the system will check once every 10 ms if a value is supposed to be transferred. The configured triggers
+of the CAN data transmission are stored permanently and need to be configured only once when commissioning a
+MARWIS-UMB.
+
+
+8.4.1 Data transmission
+The data format and byte order in the communication protocol will be as follows:
+
+LONG:              LowLowByte LowHighByte HighLowByte HighHighByte
+INT:               LowByte HighByte
+FLOAT:             Acc. to IEEE format (4 bytes)
+
+
+CAN-ID
+Every value will have its own CAN-ID. The default values correspond to the UMB value numbers. Since extended
+CAN-IDs are used, the IDE bit is set in addition.
+
+
+Examples:
+
+ Value                       Value number          11 Bit Identifier   IDE 18 Bit Identifier   RTR CAN-ID (extended)
+                             (dez./hex)            (hex)                   (hex)
+Road temperature in °C      100d = 0x0064h         0x000               1    0x00064            0   0x00000064
+Water film height in µm     600d = 0x0258h         0x000               1    0x00258            0   0x00000258
+Road state                  900d = 0x0384h         0x000               1    0x00384            0   0x00000384
+
+
+Transmission format
+The first data byte contains a status byte which indicates if a valid value is available, see Status and error codes
+[} 25]. If the status is not OK no more data will follow.
+
+
+If the status is OK (0x00h) it will be followed by the second data byte which specifies the data type in which the
+value is released, see Data types [} 26].
+
+
+Depending on the data type 1 – 4 byte with measured values will follow from the third data byte on.
+
+
+
+
+                                                           <22>
+Examples:
+
+ 11 Bit       IDE 18 Bit           RTR Data           Data byte (hex)                             Description
+ Identifier       Identifier           Length         1               2              3-6
+ (hex)            (hex)                Code           Status          Type           Value
+0x000         1      0x00064      0    1             0x54             –             –             Road temperature:
+                                                     Data error                                   no valid value
+0x000         1      0x00258      0    6             0x00             0x16          0x00 0x00     Water film height is 0
+                                                                      (4 Bytes)     0x00 0x00
+0x000         1      0x00384      0    3             0x00             0x10          0x01          Road state:
+                                                                      (1 Byte)                    1 (humid)
+
+
+8.4.2 Remote query
+Marwis supports remote value queries. Following the CAN specifications the CAN-ID corresponds to the CAN-ID
+which is used for transmitting the corresponding value with additionally set RTR bit.
+
+
+Examples:
+
+ Value                         Value number       11 Bit Identifier       IDE 18 Bit Identifier   RTR CAN-ID (extended)
+                               (dez./hex)         (hex)                       (hex)
+Road temperature in °C      100d = 0x0064h       0x000                    1    0x00064            1     0x00000064
+Water film height in µm     600d = 0x0258h       0x000                    1    0x00258            1     0x00000258
+Road state                  900d = 0x0384h       0x000                    1    0x00384            1     0x00000384
+
+
+8.4.3 Trigger configuration
+If a value is supposed to be transferred several times, a trigger can be configured which defines under which
+circumstances the value is supposed to be sent. Every value can have a trigger of its own.
+
+
+In the default settings no values will be transferred.
+
+
+CAN-ID
+The configuration of every value trigger has its own CAN-ID. The default settings correspond to the CAN-IDs of the
+value transfer with additionally set lowest value bit of the 11 bit identifier.
+
+
+Examples:
+
+ Value                         Value number       11 Bit Identifier       IDE 18 Bit Identifier   RTR CAN-ID (extended)
+                               (dez./hex)         (hex)                       (hex)
+Road temperature in °C      100d = 0x0064h       0x001                    1    0x00064            0     0x00040064
+Water film height in µm     600d = 0x0258h       0x001                    1    0x00258            0     0x00040258
+Road state                  900d = 0x0384h       0x001                    1    0x00384            0     0x00040384
+
+
+To get the CAN-ID:
+
+
+The CAN-ID is set together by 18 bit + 11 bit identifier.
+
+
+
+
+                                                            <23>
+Example road temperature:
+
+                                         11 Bit                                    18 Bit
+binär                                   0 0000 0000 01                           000000 0000 0110 0100
+hexadezimal                             0x00 0x04                                0x00 0x64
+
+
+Trigger format
+The first data byte of the trigger telegram indicates the trigger type. Depending on the type there will be possible
+parameters that are indicated from the 2nd data byte on.
+
+ Trigger             Data Length         Data byte (hex)                           Parameter
+                     Code                1                   2-5                   Data type          Description
+                                         Trigger type        Parameter
+none                1                   0x00                 –                   –                   –
+time                5                   0x01                 4 Byte              unsigned long       Intervall in ms
+difference          1                   0x02                 –                   –                   –
+minimum             2-5                 0x03                 1 - 4 Byte          Same as value       Limit value
+maximum             2-5                 0x04                 1 - 4 Byte          Same as value       Limit value
+
+
+trigger type = 0
+In case no trigger is specified the corresponding value will not be transferred.
+
+
+trigger type = 1
+The time trigger will have the value transferred in the specified interval. Take into account that the trigger check
+takes place only once every 10 ms so that it makes sense to specify an interval which is a multiple of 10 ms. Other
+intervals will be brought up to a round figure, e.g. a specified interval of 111 ms will lead to a value transfer every
+120 ms.
+
+
+trigger type = 2
+The trigger "difference" will have the value transferred each time the current value differs from the previous one.
+The trigger only makes sense for measuring data whose value changes rarely, e.g. system status.
+
+
+trigger type = 3
+The triggers “minimum” will have the corresponding value transferred only if it falls below the specified limit value.
+The limit value has to be described in the same data format and with the same units that are used for the transfer
+of the measured value.
+
+
+trigger type = 4
+The triggers “maximum” will have the corresponding value transferred only if it exceeds the specified limit value.
+The limit value has to be described in the same data format and with the same units that are used for the transfer
+of the measured value.
+
+
+
+
+                                                           <24>
+Examples:
+
+ 11 Bit     IDE 18 Bit Identifier RTR Data            Data byte (hex)              Description
+ Identifier     (hex)                 Length          1       2-5
+ (hex)                                Code            Trigger Parameter
+                                                      type
+0x001       1     0x00064          0     1            0x00      –                 The road temperature is not
+                                                                                  transmitted (any more).
+0x001       1     0x00258          0     5            0x01      0x64 0x00         The water film height is transmitted
+                                                                0x00 0x00         once every 100 ms (100d = 0x64h)
+0x001       1     0x00384          0     1            0x02      –                 The road state is transmitted each
+                                                                                  time its value changes
+
+
+8.4.4 Status and error codes
+Each value telegram contains a status byte which indicates if the transmitted value is ok or which error in the device
+prevents the value from being detected / transmitted.
+
+
+Codes:
+
+ <status>   Define                      Description
+00h (0d)    OK                         Commando successful, no error
+
+24h (36d) UNGLTG_KANAL                 Invalid channel; CAN-ID not assigned to any channel
+28h (40d) BUSY                         Device not ready, e.g. initializing, calibrating
+29h (41d) LOW_VOLTAGE                  Undervoltage
+2Ah (42d) HW_ERROR                     Hardware error
+2Bh (43d) MEAS_ERROR                   Error in the measurement
+2Ch (44d) INIT_ERROR                   Error in the device initialization
+2Dh (45d) RTOS_ERROR                   Error in the operating system
+
+30h (48d) E2_DEFAULT_KONF              Error in the configuration. Default configuration was loaded.
+31h (49d) E2_CAL_ERROR                 Error in the adjustment / the adjustment is invalid. No measurement
+                                       possible.
+32h (50d) E2_CRC_KONF_ERR              CRC error when loading the configuration. Default configuration was
+                                       loaded.
+33h (51d) E2_CRC_KAL_ERR               CRC error when load the adjustment data; no measurement possible.
+34h (52d) ADJ_STEP1                    Adjustment step 1
+35h (53d) ADJ_OK                       Adjustment OK
+36h (54d) KANAL_AUS                    Channel deactivated
+
+50h (80d) VALUE_OVERFLOW               Measured value (+Offset) is out of the specified range.
+51h (81d) VALUE_UNDERFLOW
+52h (82d) CHANNEL_OVERRANGE  Measured value (physically) is out of the measuring range (e.g. ADC
+53h (83d) CHANNEL_UNDERRANGE overrange).
+54h (84d) DATA_ERROR                   Data error in the measured values or no valid data available.
+55h (85d) MEAS_UNABLE                  Device / sensor cannot carry out a valid measurement due to ambient
+                                       conditions.
+
+
+
+
+                                                         <25>
+<status>     Define                         Description
+F0h - FEh   Do not use!!                   Reserved range e.g. for LCOM
+FFh (255d) UNBEK_ERR                       Unknown error
+
+
+8.4.5 Data types
+This protocol uses the following data types for the measured values:
+
+<type>       Type Name                   Define              Bytes        Range
+10h (16d) unsigned char                  UNSIGNED_CHAR       1            0 ... 255
+11h (17d) signed char                    SIGNED_CHAR         1            -128 ... 127
+12h (18d) unsigned short                 UNSIGNED_SHORT      2            0 ... 65.535
+13h (19d) signed short                   SIGNED_SHORT        2            -32.768 ... 32.767
+14h (20d) unsigned long                  UNSIGNED_LONG       4            0 ... 4.294.967.295
+15h (21d) signed long                    SIGNED_LONG         4            -2.147.483.648 ... 2.147.483.647
+16h (22d) float                          FLOAT*              4            ±1.18E-38 ... ±3.39E+38 (7 digits)
+17h (23d) double                         DOUBLE*             8            ±2.23E-308 ... ±1.79E+308 (15 digits)
+
+*Float and double type in IEEE format.
+
+
+
+
+                                                           <26>
+9 Maintenance
+
+9.1 Cleaning the sensor front glass pane
+       NOTICE
+Damage due to solvents!
+Solvents like benzene, thinner, alcohol, kitchen cleaners etc. can damage the housing and the optical parts.
+ 4 Only use solvent-free agents to clean the optical parts and the housing.
+ 4 If you use a chemical cleaning cloth, pay attention to the corresponding instructions.
+
+
+       NOTICE
+Damage due to leaving sensor attached while washing your car!
+If you leave the MARWIS-UMB attached to your car while using a car wash or a pressure washer, it may cause
+damage to the housing or the optical parts.
+ 4 Don't pressure wash the MARWIS-UMB.
+
+
+ 4 Ensure that the device is disconnected from power supply.
+ 4 Clean the glass pane on the sensor front with a damp, wrung out cloth.
+ 4 Dry the pane with a dry lint-free cloth.
+ 4 Remove dust and dirt from the housing.
+
+
+9.2 Checking the bolted connections
+Check all screws and the clamp straps regulary to ensure they are still fitted tightly.
+
+
+9.3 Updating firmware
+The firmware can be updated with the ConfigTool.NET software. The firmware is valid for all types of the device.
+The description of the update can be found in the ConfigTool.NET software.
+ 4 Download the latest version of the firmware and the ConfigTool.NET software:
+   www.otthydromet.com/en/software_firmware.
+ 4 Install the update on a Windows® PC.
+
+
+ i     The firmware update can also be carried out in the MARWIS-App on an iOS or Android device. The
+       description of the update can be found in the MARWIS-App.
+
+
+9.4 Replacing temperature/humidity sensor
+The temperature/humidity sensor should be replaced once a year to ensure that the temperature and humidity are
+recorded as accurately as possible.
+
+
+
+
+                                                          <27>
+10 Troubleshooting
+
+10.1 Error elimination
+
+Error                              Possible cause                      Corrective action
+Device does not allow polling or   Incorrect device ID is applied      4 Check if the correct device ID is assigned.
+does not respond                                                         Devices are delivered with ID 1.
+Device does not allow polling or   Device does not work properly       4 Check the status-LED.
+does not respond                                                       4 Check the power supply.
+                                                                       4 Check the interface connection.
+Device delivers implausible        Adaptation not suitable for         4 Repeat the adaptation using the UMB-
+values                             installation location                 Config-Tool.
+Device delivers implausible        –                                   4 Check the status-LED.
+values                                                                 4 Check if the sensor installation
+                                                                         instructions are met.
+Device transmits error value       Error in measurement, value         –
+2Bh (43d)                          cannot be determined
+Device transmits error value       A channel is being polled that is   –
+24h (36d)                          not available on this device type
+Device transmits error value       Device is in the initialization     4 Wait until the first measurement is
+28h (40d)                          phase following startup               complete.
+Device transmits error value       Faulty adaption                     4 Carry out an adaption on representative
+31h (49d)                                                                dry ground.
+Device transmits error value       Device is being operated above      –
+50h (80d)                          the limit of the specified
+                                   measuring range
+Device transmits error value       Device is being operated below      –
+51h (81d)                          the limit of the specified
+                                   measuring range
+Device transmits error value       Device is unable to execute a   –
+55h (85d)                          valid measurement due to
+                                   ambient conditions, e.g. the
+                                   measurement field is blocked by
+                                   a vehicle
+Device transmits an unknown        –                                   4 Report any malfunction to the
+error value                                                              representative of OTT HydroMet.
+
+
+10.1.1 Interfering factors
+The following interfering factors can influence the measurement result:
+ – Lengthwise oriented road markings, tarmac seams
+ – Tunnel lighting
+ – Prolonged disruptions (such as markings, tar joints, manhole covers, etc.) caused by the vehicle being
+   stationary
+ – Extreme rainfall
+ – Cast shadow (in sunny weather, shadow e.g. from trees, quick alternation between sunny and shady locations)
+
+
+
+
+                                                         <28>
+– Heat from exhaust fumes
+– Dirt on the MARWIS-UMB glass pane, e.g. from spray on wet roads
+– Very dark road surface (select surface type new blacktop in the MARWIS-UMB)
+
+
+
+
+                                                    <29>
+11 Repair
+
+11.1 Customer support
+4 Have repairs carried out by OTT HydroMet service personnel.
+4 Only carry out repairs yourself, if you have first consulted OTT HydroMet.
+4 Contact your local representative: www.otthydromet.com/en/contact-us
+4 Include the following information:
+ – instrument model
+ – instrument serial number
+ – details of the fault or problem
+ – examples of data files
+ – readout device or data acquistion system
+ – interfaces and power supplies
+ – history of any previous repairs or modifications
+ – pictures of the installation
+ – overview of the local environment conditions
+
+
+
+
+                                                      <30>
+12 Notes on disposing of old devices
+
+Member States of the European Union
+In accordance with the German Electrical and Electronic Equipment Act (ElektroG; national implementation of EU
+Directive 2012/19/EU), OTT HydroMet takes back old devices in the Member States of the European Union and
+disposes of them in the proper manner. The devices that this concerns are labeled with the following symbol:
+
+
+
+
+ 4 For further information on the take-back procedure contact OTT HydroMet:
+OTT HydroMet Fellbach GmbH
+Service & Technical Support
+Gutenbergstraße 20
+70736 Fellbach
+Germany
+phone: +49 711 518 22 0
+email: met-support@otthydromet.com
+
+
+All other countries
+4 Dispose of the product in the proper manner following decommissioning.
+4 Observe the country-specific regulations on disposing of electronic equipment.
+4 Do NOT dispose of the product in household waste.
+
+
+
+
+                                                      <31>
+13 Technical data
+
+13.1 General technical data
+
+ Specification                   Value
+Housing                         Aluminium, plastic
+Protection type                 IP68
+Measuring distance              8900.U03: 1 m, tolerance: 0.80 to 1.50 m
+                                8900.U04: 2 m, tolerance: 1.6 to 2.20 m
+                                8900.U05: 0.5 m, tolerance: 0.35 to 0.65 m
+Operating temperature range     -40 to +60 °C
+Humidity range                  0 to 100 %
+Storage temperature range       -40 to +70 °C
+Humidity range (non-condensing, 0 to 95 %
+during storage)
+Permissible height above sea    3000 m
+level
+
+
+13.2 Electrical data
+
+ Specification                   Value
+Power supply                    10 to 28 V DC on the sensor
+Power input                     Approx. 3 VA without heating
+                                50 VA with heating
+
+
+13.3 Data transfer
+
+ Specification                   Value
+Interfaces/ protocols           RS485 half-duplex, two-wire interface (UMB protocol); Bluetooth
+Data bits                       8
+Stop bit                        1
+Parity                          None
+Tri-state                       2 bits after stop bit edge
+Baud rate                       19200
+Adjustable baud rates           1200, 2400, 4800, 9600, 14400, 19200, 28800, 57600, 115200
+Sampling rate                   100 ms to 5 s, adjustable in steps of 0.1 s2 (MARWIS-UMB)
+
+
+13.4 Dimensions and weight
+
+ Specification                   Value
+Dimensions (height x width x    110 x 200 x 100 mm
+depth)
+Weight MARWIS                   Approx. 1700 g
+
+
+
+
+                                                     <32>
+13.5 Measuring range and accuracy
+
+
+Road surface temperature
+
+Specification                          Value
+Measurement process                   Optical
+Measuring range                       -40 °C to +70 °C
+Resolution                            0.1 °C
+Accuracy                              +/-0.8 K at 0 °C
+Sampling rate                         0.1 second
+Units                                 °C; °F
+
+
+Road condition
+
+Value                                  Road state
+0                                     Dry
+1                                     Damp
+2                                     Wet
+3                                     Ice-covered
+4                                     Snow / ice-covered
+5                                     Chemically wet
+6                                     Water + ice
+8                                     Snow covered
+99                                    Undefined
+
+
+Dew point temperature
+
+Specification                          Value
+Measurement process                   Passive, calculated out of air temperature and humidity
+Measuring range                       -50 °C to + 60 °C
+Resolution                            0,1 K
+
+
+Water film height
+
+Specification                          Value
+Measurement process                   Optical
+Measuring range                       0 to 6 mm
+Resolution                            0.1 µm
+Accuracy                              +/-20 % 0 to 6 mm water film height on sleek ground*
+Sampling rate                         0.01 second
+
+*Tests for checking water film height can be conducted on even ground made from sleek, non-water absorbent material with at
+least 50% reflectivity. The test area should be at least 25 x 25 cm, with a distance of 1-2 m from the MARWIS-UMB.
+
+
+
+
+                                                             <33>
+Relative humidity at road temperature
+
+ Specification                  Value
+Measurement process             Passive, calculated out of absolute air humidity and road surface temperature
+Measuring range                 0 to 100 %
+Accuracy                        0.1 %
+Sampling rate                   1.0 second
+
+
+Relative humidity
+
+ Specification                  Value
+Measurement process             Capacitive
+Measuring range                 0 to 100 %
+Resolution                      0.1 %
+Accuracy                        3 % at 40 km/h
+Sampling rate                   1.0 second
+
+
+Ambient temperature
+
+ Specification                  Value
+Measurement process             NTC
+Measuring range                 -40 °C to + 70 °C
+Resolution                      0,1 K
+Accuracy                        +/-0,5 °C from 40 km/h on
+Sampling rate                   1.0 second
+
+
+Friction
+
+ Specification                  Value
+Measuring range                 0 to 1 μ
+Resolution                      0.01
+Sampling rate                   0.01 second
+
+
+Ice percentage
+
+ Specification                  Value
+Measuring range                 0 to 100 %
+Resolution                      1%
+Sampling rate                   0.1 second
+
+
+Snow height
+
+ Specification                  Value
+Measurement process             Optical
+Measuring range                 0 to 50 mm
+
+
+
+
+                                                    <34>
+Specification   Value
+Resolution      0.01 mm
+Sampling rate   0.1 second
+
+
+
+
+                             <35>
+Contact Information
+

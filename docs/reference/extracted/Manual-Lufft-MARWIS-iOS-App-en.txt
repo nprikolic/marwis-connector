@@ -1,0 +1,659 @@
+      User Manual– MARWIS App
+
+
+
+
+App Version 1.15
+Peter Rau
+September 2017
+1 Basic Setup
+This first chapter will show how to connect to the Marwis device via Bluetooth
+and how to configure the Marwis device within the Marwis App.
+
+
+Before you can start the Marwis App, the Bluetooth connection between the
+Marwis device and the iPad/iPhone must be established, and some basic settings
+might have to be adjusted in the app settings.
+
+
+1.1 Bluetooth Pairing
+
+
+Open “Settings” on your iPad/iPhone and activate Bluetooth.
+Power on the MARWIS device.
+The device will show as “MARWIS-UMB_xxxx.yyyy” (where xxxx.yyyy is the
+serial number of the device) in the Bluetooth device list.
+
+
+Pair your iPad/iPhone with the device.
+
+
+The PIN for pairing is 1007
+
+
+Note: the device will store the pairing information and automatically reconnect to
+the iPad/iPhone if the connection was lost and the device is in reach again.
+
+
+1.2 Marwis App - Settings
+In the iOS settings some basic parameters for the Marwis app can be set:
+
+
+ Parameter           Default Value              Description
+ Server              OFF                       Connection to SmartView server
+ Connection                                    enabled/disabled
+ Enabled
+ Server Name/IP                                The host name or IP addess for
+ Address                                       the SmartView server
+ TCP Port            30100                     The TCP port for the server
+                                               connection
+ Communication       30                        Communication timeout in
+ Timeout                                       seconds for the server connection
+ Transmission        10                        Interval in seconds in which the
+ Interval                                      data is queued to be sent to the
+                                               server
+ Location Change     10                        Standby timeout in minutes for
+ Standby Timeout                               location change. Data transfer to
+                                               the server is suspended if the
+                                             location does not change for the
+                                             configured time period.
+Device              5                        Standby timeout in minutes for
+Communication                                device communication. Data
+Standby Timeout                              transfer to the server is
+                                             suspended if there is no
+                                             Bluetooth connection to the
+                                             device for the configured amount
+                                             of time.
+Device              ON                       Connection to the Marwis device
+Connection                                   enabled/disabled.
+Enabled
+Communication       750                      The communication timeout with
+Timeout (ms)                                 the MARWIS device in
+                                             milliseconds
+Retries on error    3                        The number of retries for the
+                                             device communication
+Marwis UMB          40961                    The default UMB address for the
+address                                      MARWIS device – used when
+                                             adding sensor channels to the
+                                             configuration
+Use Imperial        Off                      Determines which UMB sensor
+Units                                        channels are set up for polling
+                                             when the “default sensor
+                                             channels” for MARWIS are added
+                                             to the sensor channel
+                                             configuration
+Simple Road         Off                      If switched to “On”, the road
+Condition Status                             condition status shown on the
+(Green/Yellow/Re                             map is simplified to green = ok
+d)                                           (dry/damp/wet), Yellow =
+                                             warning, Red = critical road
+                                             condition status
+Fade Out Interval   1200                     The interval in seconds to fade
+                                             out the road condition trail on the
+                                             map
+Remove Interval     1200                     The interval after which data is
+                                             not shown on the road condition
+                                             trail anymore
+Display Overlay     Off                      If “On”, the coordinates for
+coordinates as                               displaying the location and track
+GCJ-02 (for                                  on the map within the app is
+China)                                       calculated to “GCJ-02”
+                                             coordinates (the coordinate
+                                             system used in China).
+Check for           ON                       Automatically check for firmware
+Firmware                                     updates
+Updates
+Firmware Update     http://firmware.lufft-   Configuration file for Marwis
+URL                 marwis.com/MARWISFir     firmware updates
+                    mwareUpdateInfo.xml
+ Enable Cam          Off                         Enable transmission of cam
+                                                 pictures
+ Auto Capture        Off                         Automatically capture a picture
+ Picture                                         every xx seconds. Note: pictures
+                                                 will only be transferred if the
+                                                 location is different from the last
+                                                 picture taken
+ Auto Capture        60                          Interval in seconds to
+ Interval                                        automatically capture a picture
+
+
+Usually the default settings are sufficient. If you prefer to use imperial units
+(°F/mil) over metric units (°C/µm) you might want to set the “Use Imperial
+Units” to “ON” before continuing your setup.
+
+
+If a SmartView server is used to process/display the data you need to enter the
+server host name or ip address and switch “Server Connection Enabled” to “ON”.
+
+
+1.3 Sensor Channel setup
+Start the „Marwis“ App.
+If started for the first time, the user is prompted to allow the current location.
+Please confirm with OK.
+
+
+As no sensor channels are yet configured, the appropriate dialog is displayed and
+the user is prompted if the default sensor channels for MARIWS should be added.
+Tap “Add” to confirm adding the default sensor channels.
+This will add all the default sensor channels for the MARWIS device, with the
+default Device ID as configured in the Marwis app settings (see above).
+If the sensor channels have just been added, the detailed information about the
+sensor channels is not available yet, indicated by the -?- in the sensor channel
+list.
+Information about each sensor channel is read from the Marwis device after the
+device is connected the first time.
+
+
+
+
+If the communication with the device is established and the sensor and device
+configuration could be retrieved, information about the sensor channels, i.e. the
+device internal name/description and unit for each channel, and the value range
+for each channel, is updated.
+Measure values will be acquired for all (active) sensor channels, and will be
+shown on the main screen:
+The “Sensor Channels” display will now show the last sensor value for each
+channel (if available) or error information (if no value could be retrieved from the
+device).
+2 Detailed description
+2.1 Marwis App Settings
+2.1.1 Server Connection
+The Marwis app primary function is not only to display the measurement data on
+the iPad/iPhone display, but to transmit this data to a SmartView server for
+further processing.
+
+
+The connection to SmartView is configured through the iOS settings / Marwis
+settings (see chapter 1.1 as well) and the following parameters:
+
+
+ Parameter          Default Value       Description
+ Server             OFF                Connection to SmartView server
+ Connection                            enabled/disabled
+ Enabled
+ Server Name/IP                        The host name or IP addess for the
+ Address                               SmartView server
+ Port               30100              The TCP port for the server connection
+ Communication      30                 Communication timeout in seconds for
+ Timeout                               the server connection
+ Transmission       10                 Interval in seconds in which the data is
+ Interval                              queued to be sent to the server
+ Location Change    10                 Standby timeout in minutes for location
+ Standby Timeout                       change. Data transfer to the server is
+                                       suspended the location does not change
+                                       for the configured time period.
+ Device             5                  Standby timeout in minutes for device
+ Communication                         communication. Data transfer to the
+ Standby Timeout                       server is suspended if there is no
+                                       Bluetooth connection to the device for
+                                       the configured amount of time.
+
+
+The Marwis app will use the (first) device serial number as an ID for SmartView.
+In order to connect to the SmartView server, the server must be running, and
+the Mawis interface must be configured as “active” for SmartView/Collector. Note
+that the TCP port might have to be forwarded/enabled in your router and/or
+firewall.
+
+
+The server dns host name or ip address must be configured, the “server
+connection enabled” switch must be set to “ON”.
+
+
+If the SmartView server uses a different TCP port, the appropriate port number
+must be configured for the Marwis app.
+
+
+The data collected by the Marwis app will be forwarded to the server in the
+configured “Communication Interval”.
+The “Transmission Interval” controls the interval in which measure values are
+collected to be forwarded to the server.
+If the server connection is interrupted, the data retrieved from the Marwis device
+is stored/queued within the app and transmitted to the server as soon as the
+connection could be re-established.
+
+
+“Location Change Standby Timeout”: if the GPS coordinates for the iPad/IPhone
+did not change for the specified amount of time (in minutes), data transmission
+to the server is suspended until the GPS coordinates change again (i.e. the
+position of the vehicle changes).
+“Device Communication Standby Timeout”: if the Bluetooth connection to the
+device is interrupted for the specified amount of time (in minutes), data
+transmission to the server is suspended until the Bluetooth connection is re-
+established.
+
+
+2.1.2 Device Connection
+The following parameters control the (Bluetooth) communication with the Marwis
+device:
+
+
+ Parameter           Default Value      Description
+ Device              ON                Connection to the Marwis device
+ Connection                            enabled/disabled.
+ Enabled
+ Communication       750               The communication timeout with the
+ Timeout (ms)                          MARWIS device in milliseconds
+ Retries on error    3                 The number of retries for the device
+                                       communication
+ Marwis UMB          40961             The default UMB address for the
+ address                               MARWIS device – used when adding
+                                       sensor channels to the configuration
+ Use Imperial        Off               Determines which UMB sensor channels
+ Units                                 are set up for polling when the “default
+                                       sensor channels” for MARWIS are added
+                                       to the sensor channel configuration
+
+
+Device Connection Enabled/Disabled: mainly for testing purposes – the device
+connection should always be enabled.
+Communication Timeout: the timeout for the device communication.
+Retries on error: the number of times an UMB command will be retried before it
+is considered a timeout.
+Marwis UMB address: the default UMB address for the Marwis device – used
+when sensor channels are added to the configuration.
+Use Imperial Units: controls whether the sensor channels for metric (°C/µm) or
+imperial (°F/mil) units are added to the sensor channel configuration when the
+default sensor channels for a Marwis device are configured.
+2.1.3 Data Display
+The following parameters control how the data is displayed on the main
+“dashboard” screen of the app
+ Parameter                  Default    Description
+                            Value
+ Simple Road Condition      Off        If switched to “On”, the road condition
+ Status                                status shown on the map is simplified to
+ (Green/Yellow/Red)                    green = ok (dry/damp/wet), Yellow =
+                                       warning, Red = critical road condition
+                                       status
+ Fade Out Interval          1200       The interval in seconds to fade out the
+                                       road condition trail on the map
+ Remove Interval            1200       The interval after which data is not
+                                       shown on the road condition trail
+                                       anymore
+ Display Overlay            Off        If “On”, the coordinates for displaying
+ coordinates as GCJ-02                 the location and track on the map within
+ (for China)                           the app is calculated to “GCJ-02”
+                                       coordinates (the coordinate system used
+                                       in China).
+
+
+2.1.4 Firmware update
+The following parameters control the automatic firmware update for the Marwis
+device:
+ Parameter         Default Value        Description
+ Check for         ON                  Automatically check for firmware
+ Firmware                              updates
+ Updates
+ Firmware          http://firmware.luff Configuration file for Marwis firmware
+ Update URL        t-                    updates
+                   marwis.com/MARW
+                   ISFirmwareUpdateI
+                   nfo.xml
+If enabled, the Marwis app will check for new device firmware every time the app
+is started, or once every 6 hours when a server connection is established. The
+user will be notified if a newer firmware version was found and downloaded from
+the server.
+
+
+The device firmware is stored on the iPad/iPhone. Every time a connection to a
+Marwis device is established, the device firmware version is checked against the
+stored firmware. If the stored firmware is newer, the user is prompted whether
+the device firmware should be updated or not.
+If confirmed, the firmware on the Marwis device is updated via Bluetooth.
+
+
+2.1.5 Camera Picture Support
+ Enable Cam           Off                     Enable transmission of cam
+                                              pictures
+ Auto Capture         Off                     Automatically capture a picture
+ Picture                                      every xx seconds. Note: pictures
+                                              will only be transferred if the
+                                              location is different from the last
+                                              picture taken
+ Auto Capture       60                        Interval in seconds to
+ Interval                                     automatically capture a picture
+Here, transmission of camera pictures taken from the iPhone/iPad camera can be
+activated.
+If camera transfer has been enabled, a camera icon         will be shown on the
+dashboard display next to the help (      ) icon.
+Tapping this camera icon will grab a picture and transmit it to the server.
+If “Auto Capture Picture” is enabled, a picture will be taken in the configured
+capture interval. Note that the (automatically captured) picture will only be
+transferred to the server, if the location of the picture is different from the last
+picture.
+
+
+If a picture is taken and transferred to the server (or, better, queued for transfer
+to the server), a small version of the picture is shown on the dashboard display
+(lower middle area).
+If a picture is taken, but not transferred to the server, the picture is NOT shown
+– instead only the frame around the picture is visible – to indicate that the
+picture was not automatically transferred because the location did not change.
+
+
+
+
+2.2 Dashboard Display
+The main display of the app is the “dashboard display”. It shows the last
+retrieved sensor values (for up to 5 sensor channels) and a map with a trail
+indicating the road condition value.
+2.2.1 Measurement Values
+On the left hand side the current measurement values for the configured sensor
+channels (see below) are displayed.
+A symbol on the left side indicates the type of measurement value. Tapping on a
+symbol will display a short description for the measurement type.
+
+
+2.2.2 Status Icons
+Below the measurement values 3 icons indicate the status of the
+   a) Bluetooth connection
+   b) Server connection
+   c) GPS Signal quality
+The Bluetooth and server connection status is indicated with a red cross (no
+connection) or a green arrow (connected). The GPS signal quality is indicated by
+the number of curves around the antenna symbol (the more curves the better
+the signal quality).
+Tapping on one of these icons will show a short description.
+
+
+Below the Bluetooth status icon are 3 small symbols located:
+   •   Status LED: The status LED indicates the status of the MARWIS device.
+       Gray = no connection
+       Blue = Bluetooth connection is established and configuration data is being
+       read from the device
+       Green = normal operation
+       Yellow = device is operational but adjustment might be needed (see
+       below)
+       red = there is a problem with the device.
+       purple = firmware update in progress
+   •   small gear symbol – tapping this leads to the configuration display for the
+       sensor channels (see below)
+   •   small circle with a question mark – display online help for the app
+       (requires internet connection).
+
+
+
+
+2.2.3 Map Display
+On the right hand side of the display the map with a color trail of the route taken
+is shown.
+
+
+The map can be moved/zoomed with the usual pinching and swiping gestures.
+
+
+The color mapping for the trail on the map depends on the app setting “Simple
+Road Condition Status (Green/Yellow/Red)”
+
+
+If this is active, the mapping is as follows:
+
+
+ Numerical value              Meaning                        Color
+ 0                            Dry                            Green
+ 1                            Damp                           Green
+ 2                            Wet                            Green
+ 3                            Ice                            Red
+ 4                            Snow/Ice                       Red
+ 5                            Chemically wet                 Green
+ 6                            Freezing                       Yellow
+ 7                            Critical                       Yellow
+ 8                            Snow                           Red
+ >8                           Unknown                        Light-Gray
+
+
+If this is not active, the color assignment is as follows:
+ Numerical value              Meaning                        Color
+ 0                            Dry                            Light gray
+ 1                            Damp                           Light blue
+ 2                            Wet                            Dark blue
+ 3                            Ice                            Rosy
+ 4                            Snow/Ice                       Red
+ 5                            Chemically wet                 Dark Gray
+ 6                            Freezing                       Yellow
+ 7                            Critical                       Rosy
+ 8                            Snow                           Red
+ >8                           Unknown                        Light Gray
+The trail will “fade out” (i.e. the color will become more opaque) over the
+configured “Fade Out Interval”, and the data will be removed from the tail after
+the configured “Remove Interval”.
+
+
+Below the map are 2 icons and a segment control to select the map type.
+
+
+The left of these icons – the curve – clears the path trail from the display.
+The small arrow indicates whether the map “follows” the current position (i.e. the
+map automatically moves with the vehicle so that the current position is always
+in the center of the map) or not. If the arrow is gray (disabled) the map follows
+the position (and therefore is disabled). If it is blue, the map is not centered to
+the current position and tapping on the arrow will re-center the map.
+
+
+The segment control allows to switch the map display between (road) map,
+satellite images and hybrid (road map and satellite images).
+Note that the satellite images cause higher data transfer from the map server.
+
+
+2.3 Sensor Configuration
+
+
+Tapping on the small gear icon on the dashboard display will open the “Sensor
+Channels” screen.
+Here sensor channels can be added, removed, or configured in detail.
+2.3.1 Adding sensor channels
+There is a button with a “+” symbol on the upper right corner of the screen.
+
+
+If no sensor channels have been configured yet, tapping this button will prompt
+the user if the default sensor channels for a Marwis device should be added.
+If this is confirmed by the user, following sensor channels are added:
+ UMB channel nr             Description                             Dashboard
+                                                                    Display Line
+ 100 (or 105 if “imperial   Road Temperature in °C (or °F)          4
+ units” are configured)
+ 120 (or 125 if “imperial   Dewpoint Temperature in °C (or °F)      -
+ units” are configured)
+ 600 (or 605 if “imperial   Waterfilm height in µm (or mil)         2
+ units” are configured)
+ 800                        Ice Percent in %                        5
+ 820                        Friction                                3
+ 900                        Road Condition                          1
+
+
+If the user does not confirm adding the default channels, or if there are already
+sensor channels configured, an inactive “New Sensor Channel” with the default
+device ID and sensor channel 0 is added to be configured manually.
+
+
+2.3.2 Deleting a sensor channel
+
+Swiping on a sensor channel in the list from right to left will show a red “Delete”
+button on the right hand side. Tapping the button will prompt the user to confirm
+the removal of the sensor channel from the configuration.
+2.3.3 Sensor Channel Configuration
+Tapping on a sensor channel in the “Sensor Channels” list will show the
+configuration details for each channel:
+The Name, Unit, and #Decimals attributes are used for displaying the sensor
+information on the main app screen – as is the display position and display icon
+settings.
+
+
+The UMB device id (address) and channel are used for the device communication
+and for forwarding the data to the SmartView3 server. If needed, other UMB
+devices or other sensor channels of a MARWIS device can be added to the sensor
+channels configuration.
+Only sensor channels that have a “Display Position” assigned will be displayed on
+the main app screen.
+However, all values for all active sensor channels will be transmitted (if
+configured) to the SmartView server.
+The sensor channel which has been assigned the “Road Condition” icon is used to
+display the road condition trail on the map display.
+Note that only those “Display Positions” can be selected that do not already have
+a sensor assigned. If a new sensor channel is added to the default sensor
+channels, all display positions are occupied so that no selection is offered:
+2.4 Device Information
+Tapping on the (i) symbol on the sensor channels display will show detailed
+information about the connected UMB devices, e.g. device software and
+hardware version information etc.
+
+
+
+
+Note: the Marwis app supports any kind of UMB device, and any number of UMB
+devices connected via bluetooth, so this screen is designed to show more than
+one device, even though you will usually connect to only one Marwis device.
+Tapping on a device in the list opens the “Device Configuration” dialog (if the
+Bluetooth connection is established):
+
+
+2.5 Device Configuration
+Here some device settings can be edited.
+
+
+
+
+Note that any configuration changes will be transmitted to the device when the
+dialog is closed (by returning to the device information screen). Note that in
+order for the configuration changes to take effect the device must be
+reset/restarted.
+
+
+The following parameters can be set:
+
+
+   •   Description: the device description
+   •   Status-LED: enable/disable the status LED (on the front of the Marwis
+       device)
+   •   Damp Threshold: if the water film is above this threshold, the road
+       condition is reported as “damp”.
+   •   Wet Threshold: if the water film is above this threshold, the road condition
+       is reported as “wet”.
+   •   Interference Suppression: the interval in ms for interference suppression
+   •   Bluetooth Pairing: switching this setting to “off” will “unpair” the Marwis
+       device with this iPad/iPhone
+   •   Measurement Interval: the interval (in ms) in which the device calculates
+       the measurement data and the data is transmitted to the app (range:
+       100…5000ms).
+   •   Road Condition Model: the model used for calculating the road condition.
+       Possible values are:
+          o AVG
+          o Winter 1
+          o Winter 2
+          o Winter 3
+          o Summer 1
+          o Summer 2
+
+
+On the right hand side, the adjustment profiles of the device are shown and can
+be selected or adjusted.
+Note that only valid profiles can be selected. Invalid profiles need to be adjusted
+to become valid. Invalid profiles are shown in gray.
+Profiles can be adjusted by tapping on “adi.”.
+Note that not all profiles can be adjusted – there might be factory presets that
+cannot be re-adjusted/overwritten.
+
+
+Tapping on “adj.” will open the “Adjustment/Alignment” dialog (see below)
+
+
+Pyrometer offset
+Here the offset for the pyrometer temperature can be set. The temperature as
+reported by the pyrometer is shown.
+Tapping the buttons has following effects:
+   •   “—“: decrease temperature offset (big step)
+   •   “-“: decrease temperature offset (small step)
+   •   “+”: increase temperature offset (small step)
+   •   “++”: increase temperature offset (big step)
+   •   reset : reset temperature offset to 0
+
+
+2.5.1 Adjustment/Alignment
+
+To adjust the sensor to the given kind/structure of the pavement/road surface in
+the area where the measurements will be taken, an adjustment process might
+have to be performed.
+
+
+Without a properly conducted adaptation, the measurement data output might
+be erroneous.
+Following conditions must be satisfied:
+   •   The Marwis device has to be installed on the measurement vehicle at the
+       same position (especially: height) where it will be mounted for the
+       measurements.
+   •   The adjustment has to be run on a dry road.
+   •   The vehicle must be stationary while the adaption process is in progress,
+       i.e. the adaption process must not be performed when the vehicle is
+       moving.
+   •   The kind/structure of the pavement surface where the adaption is
+       performed should be representative for the area where the measurement
+       will be taken.
+   •   The ambient temperature must be lower than 20 ° C.
+   •   The adaptation must not be carried out in artificial light.
+
+
+Up to 10 different adaption profiles can be stored in the Marwis device (some of
+which might be factory presets that cannot be overwritten).
+
+
+During the adaption basic settings for the measurement process are calculated.
+These are dependent on the structure of the pavement/road surface and the
+distance between the Marwis device and the surface. It is sensible to name the
+profiles to reflect these conditions, e.g. the name of the vehicle used, and the
+height where the Marwis device was installed.
+
+
+
+
+Only a name and the duration for the adjustment process can be set.
+Note: the LED and body temperature of the Marwis-UMB device are
+checked/monitored and displayed.
+If the LED and/or body temperature is below the valid range, a yellow/orange
+indicator is shown, and the “Overwrite” button is disabled. Please wait until the
+Marwis-UMB is heated up to the appropriate temperatures.
+
+
+If the LED and/or body temperature is above the valid range, or the
+temperatures cannot be measured (e.g. because the temperature sensors are
+defective), a red indicator is shown, and the “Overwrite” button is disabled.
+
+
+Only if the LED and body temperature is within the valid range, the “Overwrite”
+button is enabled, and a green indicator is shown.
+
+
+Tapping on “Overwrite” will start the adjustment process. While the adjustment
+is in progress, the status (i.e. the time the process is running) will be displayed.
+
+
+
+
+On successful completion, the screen will return to the device configuration
+dialog.
+
+
+Note that the Marwis device needs to be re-started in order for the changes to
+become active.
+
+
+Leaving the device configuration dialog after running an adjustment process will
+prompt the user to reboot the Marwis device.
+3 Stopping the App
+The App is designed as a “dashboard” application, i.e. to show the measurement
+values and position while the measurements are taken.
+
+
+However, the app will continue to read the measurement data from the Marwis
+device and forward the data to the server even if it is run in the background
+(home button was pressed) or the display is switched off.
+
+
+In order to really stop the app from processing data the app must be stopped.
+Double-tapping the home button will show the running/active apps on the
+iPad/iPhone.
+
+
+
+
+Swiping an app out of the screen to the top will terminate the app.
+

@@ -1,0 +1,2229 @@
+Operating Manual MARWIS-UMB                                                          English
+
+
+
+
+© OTT HydroMet Fellbach GmbH, Fellbach, Germany. Subject to change without notice.
+MARWIS-UMB                                                                                                                     Operating Manual V 3.4
+
+
+Contents
+1 Read before use............................................................................................................................................ 6
+   1.1 Used symbols........................................................................................................................................ 6
+   1.2 Safety instructions................................................................................................................................. 6
+   1.3 Designated use...................................................................................................................................... 6
+   1.4 Incorrect use.......................................................................................................................................... 6
+   1.5 Guarantee.............................................................................................................................................. 6
+   1.6 Brand names......................................................................................................................................... 7
+2 Scope of delivery ........................................................................................................................................ 7
+3 Part numbers................................................................................................................................................. 7
+   3.1 MARWIS-UMB....................................................................................................................................... 7
+   3.2 Accessories............................................................................................................................................ 8
+   3.3 Spare parts............................................................................................................................................ 8
+   3.4 Additional documents and software....................................................................................................... 8
+4 Equipment description................................................................................................................................... 9
+   4.1 Road surface temperature..................................................................................................................... 9
+   4.2 Ambient temperature............................................................................................................................. 9
+   4.3 Relative humidity2................................................................................................................................. 9
+   4.4 Dew point temperature........................................................................................................................... 9
+   4.5 Relative humidity at road temperature................................................................................................... 9
+   4.6 Water film height.................................................................................................................................... 9
+   4.7 Road condition..................................................................................................................................... 10
+   4.8 Ice percentage..................................................................................................................................... 10
+   4.9 Snow Height........................................................................................................................................ 10
+   4.10 Friction............................................................................................................................................... 10
+   4.11 Sensor technology MARWIS-UMB..................................................................................................... 11
+   4.12 Status-LED........................................................................................................................................ 12
+5 Generation of measurements ..................................................................................................................... 12
+   5.1 Current measurement (act).................................................................................................................. 12
+   5.2 Normal operation................................................................................................................................. 12
+6 Measurement output.................................................................................................................................... 13
+   6.1 Measurements..................................................................................................................................... 13
+       6.1.1 Road Surface Temperature.......................................................................................................... 13
+       6.1.2 AmbientTemperature.................................................................................................................... 13
+       6.1.3 Relative Humidity......................................................................................................................... 13
+       6.1.4 Dew point temperature................................................................................................................ 13
+       6.1.5 Relative humidity at road temperature......................................................................................... 14
+       6.1.6 Water film height.......................................................................................................................... 14
+       6.1.7 Water film height on smooth surface............................................................................................14
+       6.1.8 Road condition............................................................................................................................. 14
+       6.1.9 Ice percentage............................................................................................................................. 15
+       6.1.10 Snow Height.............................................................................................................................. 15
+       6.1.11 Friction....................................................................................................................................... 15
+   6.2 Additional sensor information............................................................................................................... 15
+       6.2.1 Device status............................................................................................................................... 16
+       6.2.2 Measurement status.................................................................................................................... 16
+7 Mounting...................................................................................................................................................... 18
+   7.1 Hints for mounting MARWIS-UMB....................................................................................................... 18
+   7.2 Mounting height................................................................................................................................... 18
+       7.2.1 8900.U03, Mounting with short protective housing, angle 20º.....................................................18
+       7.2.2 8900.U04, Mounting with short protective housing, angle 20º.....................................................18
+       7.2.3 8900.U05, Mounting with short protective housing, angle 20º.....................................................18
+       7.2.4 8900.U03, Mounting with long protective housing, angle 10º......................................................19
+       7.2.5 8900.U04, Mounting with long protective housing, angle 10º......................................................19
+   7.3 Protective housing............................................................................................................................... 20
+       7.3.1 Connecting the MARWIS-UMB to the protective housing............................................................20
+   7.4 Example: Mounting with magnetic bar carrier for horizontal installation and short protective housing.25
+   7.5 Example: Mounting with magnetic bar carrier for vertical installation and long protective housing......25
+
+                                                          OTT HydroMet Fellbach GmbH                                                                            iii
+Operating Manual V 3.4                                                                                                                      MARWIS-UMB
+
+8 Connections................................................................................................................................................. 26
+   8.1 Connection plug................................................................................................................................... 26
+   8.2 Pin assignment.................................................................................................................................... 26
+   8.3 Supply voltage..................................................................................................................................... 27
+   8.4 RS485-interface................................................................................................................................... 27
+   8.5 Bluetooth connection........................................................................................................................... 27
+9 Commissioning............................................................................................................................................ 28
+   9.1 Adaption of the sensor......................................................................................................................... 28
+      9.1.1 Possible reasons why an adaption may fail.................................................................................28
+   9.2 Selecting the settings for the road condition model.............................................................................28
+      9.2.1 Illustration of how the road condition is determined.....................................................................29
+   9.3 Important hints prior to commissioning................................................................................................ 30
+10 Carrying out the sensor adaption............................................................................................................... 31
+   10.1 Adaption with the MARWIS-App........................................................................................................ 31
+11 Configuration and test................................................................................................................................ 31
+   11.1 Factory Settings................................................................................................................................. 31
+12 Firmware Update....................................................................................................................................... 32
+   12.1 Update with the MARWIS-App or ConfigTool.Net..............................................................................32
+13 Maintenance.............................................................................................................................................. 32
+   13.1 Cleaning the sensor front glass pane................................................................................................. 32
+   13.2 Checking the bolted connections...................................................................................................... 32
+14 Technical Data........................................................................................................................................... 33
+   14.1 Device................................................................................................................................................ 33
+   14.2 Measuring Range / Accuracy............................................................................................................. 34
+      14.2.1 Road Surface Temperature........................................................................................................ 34
+      14.2.2 Road Condition.......................................................................................................................... 34
+      14.2.3 Dew point temperature............................................................................................................... 34
+      14.2.4 Water film................................................................................................................................... 34
+      14.2.5 Relative humidity at road temperature.......................................................................................34
+      14.2.6 Relative humidity....................................................................................................................... 35
+      14.2.7 Ambient temperature................................................................................................................. 35
+      14.2.8 Friction....................................................................................................................................... 35
+      14.2.9 Ice percentage........................................................................................................................... 35
+      14.2.10 Snow Height............................................................................................................................ 35
+   14.3 Drawings............................................................................................................................................ 36
+      14.3.1 MARWIS-UMB with short protective housing.............................................................................36
+      14.3.2 MARWS-UMB with long protective housing...............................................................................37
+15 Declaration of Conformity.......................................................................................................................... 38
+   15.1 EC Certificate of Conformity.............................................................................................................. 38
+   15.2 FCC Compliance statement (US)...................................................................................................... 38
+   15.3 IC Compliance statement (CA).......................................................................................................... 39
+16 Disturbances.............................................................................................................................................. 40
+   16.1 Possible errors occurring on the MARWIS-UMB................................................................................40
+   16.2 Interfering factors which can influence the measurement result........................................................40
+17 Disposal..................................................................................................................................................... 41
+   17.1 Within the EU..................................................................................................................................... 41
+   17.2 Outside the EU.................................................................................................................................. 41
+18 Repair / Corrective Maintenance............................................................................................................... 41
+   18.1 Technical Support.............................................................................................................................. 41
+19 Appendix.................................................................................................................................................... 42
+   19.1 Channel List Summary....................................................................................................................... 42
+   19.2 Communication in binary protocol...................................................................................................... 43
+      19.2.1 Framing...................................................................................................................................... 44
+      19.2.2 Addressing with Class and Device ID........................................................................................44
+      19.2.3 Example for creating addresses................................................................................................45
+      19.2.4 Example online data query........................................................................................................ 45
+      19.2.5 Example online data query multiple channels............................................................................46
+      19.2.6 Example online data query multiple channels V1.1...................................................................46
+
+
+iv                                                        OTT HydroMet Fellbach GmbH
+MARWIS-UMB                                                                                                              Operating Manual V 3.4
+
+  19.3 CAN Protocol (Version 1.0)................................................................................................................ 48
+     19.3.1 General remarks........................................................................................................................ 48
+     19.3.2 Pin assignment.......................................................................................................................... 48
+     19.3.3 CAN-Parameter......................................................................................................................... 48
+     19.3.4 Data format and byte order in the communication protocol........................................................48
+     19.3.5 Data transmission...................................................................................................................... 48
+        19.3.5.1 CAN-ID.............................................................................................................................. 48
+        19.3.5.2 Transmission format.......................................................................................................... 49
+     19.3.6 Remote Query........................................................................................................................... 49
+     19.3.7 Configuration of a trigger........................................................................................................... 49
+        19.3.7.1 CAN-ID.............................................................................................................................. 49
+        19.3.7.2 Trigger format.................................................................................................................... 50
+     19.3.8 Status and error codes............................................................................................................... 51
+     19.3.9 Data types.................................................................................................................................. 52
+
+
+
+
+                                                     OTT HydroMet Fellbach GmbH                                                                          v
+MARWIS-UMB                                                                        Operating Manual V 3.4
+
+
+
+     1   Read before use
+         Please read this Operating Manual carefully and keep it handy for future reference. Please note
+         that various components of the sensor and the described software may look somewhat different
+         from those shown in the illustrations in this operating manual.
+
+
+     1.1 Used symbols
+
+
+
+
+                      Important information about potential hazard to the user
+
+
+                      Important information concerning the correct operation of the equipment
+
+
+
+     1.2 Safety instructions
+
+             •   Installation and commissioning must only be carried out by suitably qualified specialist
+                 personnel.
+             •   Never take measurements on or touch live electrical parts.
+             •   Pay attention to the technical data, storage and operating conditions.
+
+     1.3 Designated use
+
+             •   The equipment must only be operated within the range of the specified technical data.
+             •   The equipment must only be used under the conditions and for the purpose for which it
+                 was designed.
+             •   The equipment must not be modified or altered in its construction; otherwise, operation-
+                 al safety and correct functioning cannot be guaranteed.
+
+     1.4 Incorrect use
+
+         If the equipment is not correctly installed
+             •   it may function in a limited way or not function at all
+             •   it may entail a risk of injury by falling down
+
+         Note: The driver is liable for securing his vehicle's load.
+
+         If the equipment is not correctly connected
+             •   it may not function
+             •   it may be permanently damaged
+             •   it may entail the risk of an electrical shock
+
+     1.5 Guarantee
+
+         The guarantee applies for 24 months from date of delivery. The guarantee will not apply if the
+         designated use is violated.
+
+
+
+
+6                                     Chapter 1, Read before use
+Operating Manual V 3.4                                                                     MARWIS-UMB
+
+       1.6 Brand names
+
+           All brand names referred to are subject without limitation to the valid trademark and ownership
+           rights of the respective owner.
+
+
+
+       2   Scope of delivery
+           The delivery contains the following components:
+
+
+
+
+             MARWIS-UMB
+
+
+
+
+                                              Illustration 1: Marwis-UMB
+
+
+                                        Connection cables and plugs have to be ordered seperately. You
+             Cable / Plug               will find the part numbers in chapter 3.2 Accessories or on our
+                                        homepage www.lufft.com
+
+                                        In order to protect the MARWIS-UMB from pollution it has to be
+                                        used in any case with one of the two available protective hous-
+                                        ings. The respective protective housing has to be ordered
+             Protective housing
+                                        separately.
+                                        The part numbers will be found in chapter 3.2 Accessories or on
+                                        our homepage www.lufft.com.
+
+             Operating Manual
+
+
+
+
+       3   Part numbers
+
+       3.1 MARWIS-UMB
+
+           8900.U03..............MARWIS-UMB for 1 m (3 ¼ ft) measuring distance to the ground
+           8900.U04..............MARWIS-UMB for 2 m (6 ½ ft) measuring distance to the ground
+           8900.U05..............MARWIS-UMB for 0.5 m (1 ¾ ft) measuring distance to the ground
+
+
+
+
+                                       Chapter 3, Part numbers                                            7
+MARWIS-UMB                                                                                                       Operating Manual V 3.4
+
+         3.2 Accessories
+
+               Protective housing short (recommended for mounting on passenger car)..............8900.G01
+               Protective housing long (recommended for mounting on lorry)...............................8900.G02
+               Assembly kit magnetic bar carrier (horizontal)......................................................8900.G01H
+               Assembly kit magnetic bar carrier (vertical)..........................................................8900.G01V
+               Additional magnetic fastener for 8900.G01H or 8900.G01V.................................8900.G01M
+               Connection cable, 15 m (49 ¼ ft) .......................................................................8371.UK015
+               Connection cable, 5 m (16 ⅜ ft) with 12V car adapter for cigarette lighter............8900.UK05
+               Plug without cable1................................................................................................ 8371.UST1
+
+
+
+         3.3 Spare parts
+
+               Temperature humidity sensor..............................................................8900.UTFF
+
+
+         3.4 Additional documents and software
+
+               You can download the following documents and software from the internet on www.lufft.com:
+                    •     Operating Manual......................this document
+                    •     UMB-Protocol...............Communication protocol for UMB devices
+                    •     Firmware......................latest firmware for the equipment
+
+               MARWIS App for iOS operating systems can be downloaded from iTunes. The MARWIS-App for
+               Android is available in Google Playstore.
+
+
+
+
+1   Communication has been tested at a maximum cable length of 15m (50 ft) with a bit rate of 115200 baud
+
+
+8                                                      Chapter 3, Part numbers
+Operating Manual V 3.4                                                                        MARWIS-UMB
+
+
+
+        4   Equipment description
+            In accordance with the demands on road traffic meteorological network sensors are mounted on
+            vehicles. MARWIS-UMB for the detection of water, ice, snow and friction can be installed on
+            vehicles. The distance between the sensor and the road must be either 0.5, 1 m or 2 m (1 ¾ ft ,
+            3 ¼ ft or 6 ½ ft).
+            The device works with infrared measuring. Four emitting and two receiving diodes capture the
+            reflecting behaviour of the road surface at varying wave lengths. Due to the different spectral
+            properties of various substances – e.g. water and ice – the road state can be deduced from the
+            captured values.
+            MARWIS-UMB delivers values for road temperature, dew point temperature, ambient
+            temperature and humidity, relative humidity at road temperature, water film height, road state,
+            ice percentage and friction.
+            With an increasing number of ice particles on the road surface the friction coefficient falls and
+            can thus be of important help when deciding about preventive gritting.
+            Due to the open interface protocols, MARWIS-UMB can be easily integrated into existing winter
+            maintenance monitoring networks. Similarly, MARWIS-UMB can communicate directly with the
+            control system of gritting vehicles.
+            The measurement data output supports the following protocols: UMB binary.
+
+
+        4.1 Road surface temperature
+
+            The road surface temperature is measured with a non-invasive pyrometer which is fullly
+            integrated into the sensor.
+
+
+        4.2 Ambient temperature2
+
+            The ambient temperature is the air temperature which is measured by the sensor on the side of
+            the MARWIS-UMB.
+
+
+        4.3 Relative humidity2
+
+            Relative humidity indicates the degree to which the air is saturated with water vapour. It changes
+            with temperature since hot air can absorb more vapour than cold air.
+
+
+        4.4 Dew point temperature
+
+            The dew point temperature is the temperature where the current partial water vapour pressure
+            equals the saturated vapour pressure, which means that condensation sets in e.g. in the form of
+            fog.
+
+
+        4.5 Relative humidity at road temperature
+
+            The calculation of the relative humidity at road temperature is based on the absolute humidity
+            and the road temperature. It can be used as an indicator for impending formation of dew or
+            hoarfrost.
+
+
+        4.6 Water film height
+
+            The water film height on the road surface is measured with a non-invasive optical spectroscopy.
+
+2   Only MARWIS-UMB
+
+
+                                     Chapter 4, Equipment description                                       9
+MARWIS-UMB                                                                                                 Operating Manual V 3.4
+
+                 The water film height is the sum of liquid water and water equivalent of frozen water.
+                 The sensor gives both the water film height on smooth surface and the water film height, which
+                 takes into account the water in the pores of the road surface. Via surface type (asphalt,
+                 concrete) you determine, which amount of water must be considered in the pores.
+
+
+          4.7 Road condition
+
+                 The road condition is determined from the measurement of water film height, road surface
+                 temperature and ice percentage. The sensor deduces the road conditions of dry, damp, wet,
+                 snow / ice, chemical wetness and water + ice.3 .
+                 The values which are supposed to be used in the calculation of the road condition can be set,
+                 e.g. highest, lowest or average road temperature of the last covered road section. For this
+                 purpose, predefined settings are available for selection.
+
+
+          4.8 Ice percentage
+
+                 With the data from the optical spectroscopy the frozen part of the aqueous solution on the road
+                 is determined and delivered as ice percentage.
+
+
+          4.9 Snow Height
+
+                 The sensor detects the snow height in the field of measurement.
+                 Note: The snow height is an additional information and it is not part of the water equivalent.
+
+
+          4.10 Friction
+
+                 Friction describes the adhesion of tyres on the road surface. This can be reduced due to ambi -
+                 ent conditions such as rain or snow. The value of the friction is scaled between 0.1 and 1.0. High
+                 values indicate high adhesion, low values stand for low adhesion. The highest value (1.0) will be
+                 achieved when the road is dry whereas the lowest result (0.1) will come up with water on ice.
+                 Note: The grip of a road is determined basically by the texture of its surface. The friction value of
+                 the MARWIS-UMB indicates to which degree the maximum possible grip of a specific road is
+                 reached, respectively how much it has been reduced by ambient conditions.
+                 Therefore, identical friction values of the MARWIS-UMB on different road surfaces mean
+                 different grip.
+
+
+
+
+3    The road condition model is subject to constant improvement. Please check regularly on the availability of firmware updates.
+
+
+10                                              Chapter 4, Equipment description
+Operating Manual V 3.4                                             MARWIS-UMB
+
+
+       4.11 Sensor technology MARWIS-UMB
+
+
+
+
+           Illustration 2: MARWIS-UMB Components
+
+
+
+
+                                 Illustration 3: Lateral
+                                 temperature sensor (only
+                                 MARWIS-UMB)
+
+
+
+
+                                Chapter 4, Equipment description           11
+MARWIS-UMB                                                                       Operating Manual V 3.4
+
+
+     4.12 Status-LED
+
+         The device is equipped with a status LED which indicates the current state of the MARWIS-
+         UMB. A blinking LED in any colour means that UMB data transfer is taking place through RS485
+         or Bluetooth.
+         Meaning of the LED colours:
+
+             Colour                                       Description
+         Green           Device status OK, infrared measurement active
+         Blue            Device status OK, infrared measurement active, active Bluetooth connection
+                         Device status OK, Error in infrared measurement
+                         (e.g. operating temperature has not yet been reached in the warm up phase)
+         Yellow
+                         The status channel ”measurement status“ provides detailed information about
+                         the nature of the error.
+         Magenta         Firmware update active; Don't separate sensor from power supply!
+                         Device error
+         Red             The status channel “device status“ provides detailed information about the
+                         nature of the error.
+         Blinking        Data transfer is taking place.
+
+
+         The status of the device and the measurement can also be retrieved on UMB channels 4000 and
+         4001. The corresponding description can be found in chapter Fehler: Referenz nicht
+         gefunden Fehler: Referenz nicht gefunden on page Fehler: Referenz nicht gefunden
+
+
+     5   Generation of measurements
+
+     5.1 Current measurement (act)
+
+         In accordance with the specified sampling rate, the value of the last measurement is transmitted
+         when the current measurement value is requested.
+         In order to suppress disturbances which can occur in a mobile operation the measured values in
+         the MARWIS-UMB are filtered over a configurable period of time. Examples for disturbances
+         which can influence the result are described in chapter 16.2, on page 40 of this
+         document.Operation modes
+
+
+     5.2 Normal operation
+
+         The MARWIS-UMB is switched on and off by connecting and disconnecting the power supply.
+         After being switched on it takes a starting time of about 10 seconds before the first measure-
+         ment values appear. Depending on the operating temperature and on the current ambient
+         temperature a warm up phase of 5 up to 15 minutes may be required before the first plausible
+         values appear. This period can be reduced if the MARWIS-UMB is powered with 24 V (as
+         opposed to 12 V). The state of readiness is indicated by the status LED turning green or blue
+         respectively in case the Bluetooth connection is active. The meanings of the status LED's
+         colours are described in chapter 4.12 on page 12.
+
+
+
+
+12                            Chapter 5, Generation of measurements
+Operating Manual V 3.4                                                                        MARWIS-UMB
+
+
+
+       6   Measurement output
+           The measured values are delivered in the UMB binary protocol. You can find an example for a
+           data retrieval and the complete overview of the UMB channels in the appendix.
+
+
+       6.1 Measurements
+
+
+       6.1.1 Road Surface Temperature
+           Sampling rate........< 1 second
+           Units......................ºC; ºF
+
+                                                                                        Measuring range
+                    UMB Channel                     Measurement variable (float32)
+                                                                                     min     max     unit
+                           100                         Road surface temperature      -40.0   70.0     ºC
+                           105                         Road surface temperature      -40.0   158.0    ºF
+
+       6.1.2 AmbientTemperature
+           Sampling rate........1 second
+           Units......................ºC; ºF
+
+                                                                                        Measuring range
+                    UMB Channel                     Measurement variable (float32)
+                                                                                     min     max     unit
+                           110                           Ambient temperature         -50.0   70.0     ºC
+                           115                           Ambient temperature         -58.0   158.0    ºF
+
+       6.1.3 Relative Humidity
+           Sampling rate........1 second
+           Units......................%
+
+                                                                                        Measuring range
+                    UMB Channel                     Measurement variable (float32)
+                                                                                     min     max     unit
+                           210                             Relative humidity          0      100      %
+
+       6.1.4 Dew point temperature
+           Sampling rate........1 second
+           Units......................ºC; ºF
+
+                                                                                        Measuring range
+                    UMB Channel                     Measurement variable (float32)
+                                                                                     min     max     unit
+                           120                           Dew point temperature       -50.0   60.0     ºC
+                           125                           Dew point temperature       -58.0   140.0    ºF
+
+
+
+
+                                               Chapter 6, Measurement output                               13
+MARWIS-UMB                                                                                                  Operating Manual V 3.4
+
+
+          6.1.5 Relative humidity at road temperature
+                 Sampling rate........1 second
+                 Units......................% r.h.
+
+                                                                                                            Measuring range
+                          UMB Channel                      Measurement variable (float32)
+                                                                                                        min         max         unit
+                                                              Relative humidity at road
+                                 200                                                                    -0.0       100.0            %
+                                                                    temperature
+
+          6.1.6 Water film height
+                 Sampling rate........100 Hz
+                 Units......................µm, mil, mm
+
+                                                                                                            Measuring range
+                          UMB Channel                      Measurement variable (float32)
+                                                                                                        min         max         unit
+                                 600                              Water film height                      0.0       6000.0           µm
+                                 605                              Water film height                      0.0       236.2            mil
+                                 610                              Water film height                      0.0         6.0            mm
+
+          6.1.7 Water film height on smooth surface
+                 Sampling rate........100 Hz
+                 Units......................µm, mil, mm
+
+                                                                                                            Measuring range
+                          UMB Channel                      Measurement variable (float32)
+                                                                                                        min         max         unit
+                                 601                         Water film height on surface                0.0       6000.0           µm
+                                 606                         Water film height on surface                0.0       236.2            mil
+                                 611                         Water film height on surface                0.0         6.0            mm
+
+
+                 Channels 601, 606 and 611 do no consider the water in the pores of the road surface.
+
+
+          6.1.8 Road condition4
+                 Sampling rate........10 Hz
+                 Units......................logic coding
+
+                          UMB Channel                      Measurement variable (uint8)                           Coding
+                                                                                                        0      dry
+                                                                                                        1      damp
+                                                                                                        2      wet
+                                                                                                        3      ice-covered
+                                 900                               Road condition                       4      snow-/ice-covered
+                                                                                                        5      chemically wet
+                                                                                                        6      water + ice
+                                                                                                        8      snow-covered
+                                                                                                       99      undefined
+
+4    The road condition model is subject to constant improvement. Please check regularly on the availability of firmware updates.
+
+
+14                                                   Chapter 6, Measurement output
+Operating Manual V 3.4                                                                               MARWIS-UMB
+
+
+
+           dry:                              no liquid water on the road;
+                                             water film height below damp threshold
+           damp:                             liquid water on the road;
+                                             water film height below wet threshold
+           wet:                              liquid water on the road;
+                                             water film height on or above wet threshold
+           ice-covered:                      frozen water on the road mainly in the form of ice
+           snow- / ice-covered:              frozen water on the road either in the form of ice or snow; a more
+                                             precise differentiation is not possible
+           chemically wet:                   the water film height is on or above the damp threshold and the road
+                                             surface temperature is below 1.5°C (34.7 °F); the formation of ice is
+                                             inhibited by the presence of de-icing chemicals
+           water + ice:                      water film height is on or above the damp threshold and the road
+                                             surface temperature is below 1.5°C (34.7 °F) with the formation of ice
+                                             particles starting;
+           snow-covered:                     frozen water on the road mainly in the form of snow
+
+
+       6.1.9 Ice percentage
+           Sampling rate........10 Hz
+           Units......................%
+
+                                                                                             Measuring range
+                    UMB Channel                    Measurement variable (float32)
+                                                                                           min     max       unit
+                           800                              Ice Percentage                 0.0     100.0          %
+
+       6.1.10 Snow Height
+           Sampling rate........10 Hz
+           Units......................mm
+
+                                                                                             Measuring range
+                    UMB Channel                    Measurement variable (float32)
+                                                                                           min     max       unit
+                           612                               Snow Height                   0.0      50        mm
+
+       6.1.11 Friction
+           Sampling rate........10 Hz
+           Units......................none
+
+                                                                                             Measuring range
+                    UMB Channel                    Measurement variable (float32)
+                                                                                           min     max       unit
+                           820                                  Friction                   0.0      1.0      none
+
+       6.2 Additional sensor information
+
+           The sensor delivers more information about its state and functioning.
+
+
+
+
+                                             Chapter 6, Measurement output                                            15
+MARWIS-UMB                                                                             Operating Manual V 3.4
+
+     6.2.1 Device status
+                  UMB channel               Measurement variable (uint16)
+                      4000                           Device status
+         Bit 0           RESERVED
+                                                 0      Supply voltage in range
+         Bit 1           Supply voltage status
+                                                 1      Low voltage detected
+                                                 0      Flash OK
+         Bit 2           Flash status
+                                                 1      Error on reading / writing to onboard flash
+                                                 0      NIR measurement OK
+         Bit 3           NIR status                     Error in NIR measurement
+                                                 1
+                                                        (see UMB Channel 4001 for details)
+                                                 0      Pyro measurement OK
+         Bit 4           Pyro status
+                                                 1      Error in pyrometer measurement
+                                                 0      TFF (t/h.r.) measurement OK
+         Bit 5           TFF status
+                                                 1      Error in TFF (t/h.r.) measurement
+                                                 0      Internal heater temp. measurement OK
+                         Heater temperature
+         Bit 6                                          Error measuring heater temperature
+                         measurement status      1
+                                                        (Heating will be disabled)
+                                                 0      RS485 communication OK
+         Bit 7           RS485 status
+                                                 1      Error in RS485 communication
+                                                 0      Bluetooth module up and running
+         Bit 8           Bluetooth status
+                                                 1      Error on Bluetooth communication
+         Bit 9 - 15      RESERVED
+
+
+     6.2.2 Measurement status
+
+                  UMB channel               Measurement variable (uint16)
+                      4001                       Measurement status
+                                                 0      Device temperature in operating range
+         Bit 0          Operating temperature
+                                                 1      Invalid operating temperature (status LED: orange)
+                                                 0      NIR measurement OK
+         Bit 1          NIR timeout
+                                                 1      Timeout error during NIR measurement
+                                                 0      Monitor measurement OK
+         Bit 2          Monitor error
+                                                 1      Error at monitor measurement (LED defective)
+                                                 0      NIR measurement ok
+         Bit 3          NIR measurement
+                                                 1      NIR measurement invalid
+         Bit 4 – 7      RESERVED
+                                                 0      Adjustment profile valid
+                        Invalid adjustment
+         Bit 8                                          Invalid adjustment profile selected; WFH measurement
+                        profile                  1
+                                                        impossible
+         Bit 9 - 14     RESERVED
+                                                 0      No error
+         Bit 15         General error
+                                                 1      Unspecified, general error
+
+
+
+
+16                                    Chapter 6, Measurement output
+Operating Manual V 3.4                                   MARWIS-UMB
+
+
+
+
+                         Chapter 6, Measurement output           17
+MARWIS-UMB                                                                                Operating Manual V 3.4
+
+
+
+     7   Mounting
+
+     7.1 Hints for mounting MARWIS-UMB
+
+         The mounting of the MARWIS-UMB on the vehicle must be fit to be used on the road.
+         The protective housings 8900.G01 and 8900.G02 are supposed to protect the sensor from tur-
+         bulences and dirt which could impair the measurement. They do not affect the measuring dis -
+         tance which has to be measured in any case between the sensor face and the road.
+         It has to be made sure that the field of view of the MARWIS-UMB is directed to the road and not
+         interrupted by vehicle parts. The zone that would be covered if the side parts of the protective
+         housing were extended down to the road should be free of obstacles. The inclination angle of
+         the MARWIS-UMB towards the road must correspond to the one which is given by the protective
+         housing (see illustrations in chapter 14.3).
+         The MARWIS-UMB should be installed in a way that ensures it cannot be affected by heat from
+         the exhaust fumes of the vehicle.
+         It should be avoided installing the MARWIS-UMB straight above the tyres track since in this
+         position the risk of spume soiling the glass front of the MARWIS-UMB is elevated which could in
+         turn affect the measurement of the water film height.
+
+
+     7.2 Mounting height
+
+         The measuring distance of 1 m or 2 m (3¼ ft or 6½ ft) for the 2 MARWIS-UMB types refer to the
+         distance from the sensor front (glass) to the road. This measuring distance should be observed
+         as exactly as possible. The tolerance which still allows for plausible measurement values
+         amounts to -20 cm / +50 cm (-8 in / + 19¾ in) in case of instrument 8900.U03, -40 cm / +20 cm
+         (-15¾ in / +8 in) for instrument 8900.U04. A more detailed description will follow in the next
+         chapters.
+
+
+     7.2.1 8900.U03, Mounting with short protective housing, angle 20º
+         Minimal height..........75 cm...(29 ½ in)..............measuring distance .......80 cm. .(31 ½ in)
+         Ideal height..............96 cm...(37 ¾ in)..............measuring distance .....100 cm. .(39 ⅜ in)
+         Maximum height.....141 cm...(55 ½ in)..............measuring distance .....150 cm......(59 in)
+
+
+     7.2.2 8900.U04, Mounting with short protective housing, angle 20º
+         Minimal height........150 cm.......(59 in)..............measuring distance......160 cm......(63 in)
+         Ideal height............188 cm.......(74 in)..............measuring distance .....200 cm. .(78 ¾ in)
+         Maximum height.....207 cm...(81 ½ in)..............measuring distance .....220 cm. .(86 ⅝ in)
+
+
+     7.2.3 8900.U05, Mounting with short protective housing, angle 20º
+         Minimal height..........33 cm.......(13 in)..............measuring distance .......35 cm. .(13 ¾ in)
+         Ideal height..............47 cm. .(18 ½ in)..............measuring distance .......50 cm. .(19 ¾ in)
+         Maximum height.......61 cm.......(24 in)..............measuring distance .......65 cm. .(25 ⅝ in)
+
+
+
+
+18                                          Chapter 7, Mounting
+Operating Manual V 3.4                                                                                  MARWIS-UMB
+
+
+
+
+                   Illustration 4: 8900.U04 Mounting at an angle of 20°
+
+
+
+       7.2.4 8900.U03, Mounting with long protective housing, angle 10º
+           Minimal height..........79 cm...(31 ⅛ in)..............measuring distance .......80 cm. .(31 ½ in)
+           Ideal height..............98 cm...(38 ⅝ in)..............measuring distance .....100 cm. .(39 ⅜ in)
+           Maximum height.....148 cm...(58 ½ in)..............measuring distance .....150 cm......(59 in)
+
+
+       7.2.5 8900.U04, Mounting with long protective housing, angle 10º
+           Minimal height........157 cm...............................measuring distance .....160 cm......(63 in)
+           Ideal height............197 cm...............................measuring distance .....200 cm. .(78 ¾ in)
+           Maximum height.....217 cm...............................measuring distance .....220 cm. .(86 ⅝ in)
+
+
+
+
+                                               Chapter 7, Mounting                                                   19
+MARWIS-UMB                                                                      Operating Manual V 3.4
+
+
+     7.3 Protective housing
+
+         The protective housing is supposed to protect the MARWIS-UMB from dirt and turbulences. Fur-
+         thermore it is equipped with a flange which can be used for fixing it.
+
+
+     7.3.1 Connecting the MARWIS-UMB to the protective housing
+         Loosen the screws on the upper side of the MARWIS-UMB and take off the plastic stripes.
+
+
+
+
+                                  Illustration 5: Loosen screws on MARWIS-UMB
+                                  housing
+
+
+
+
+                                                                   Illustration 7: Fixing stripes and
+                                                                   screws
+
+
+             Illustration 6: Preparation for connecting the
+             protective housing
+
+
+
+
+20                                         Chapter 7, Mounting
+Operating Manual V 3.4                                                                       MARWIS-UMB
+
+           The delivery of the protective housing includes 2 clamp straps for fixing it to the MARWIS-UMB.
+
+
+
+
+             Illustration 8: clamp strap
+
+
+
+           Place the clamp straps that have come with the protective housing on the MARWIS-UMB so that
+           the profiles of the two clamp straps fit in neatly with the dents on the upper side of the MARWIS-
+           UMB.
+
+
+
+
+                                                            Illustration 10: Placing the clamp straps
+
+
+
+
+            Illustration 9: Placing the clamp straps
+
+
+
+
+                                            Chapter 7, Mounting                                           21
+MARWIS-UMB                                                                         Operating Manual V 3.4
+
+        Mount the plastic bars of the clamping device on the MARWIS-UMB; insert the screws and
+        tighten them.
+
+
+
+
+        Illustration 11: Fixing the clamp straps          Illustration 12: Insert screws
+
+
+
+
+        Illustration 13: Tighten screws
+
+
+
+
+22                                        Chapter 7, Mounting
+Operating Manual V 3.4                                                                        MARWIS-UMB
+
+           Put the MARWIS-UMB on the protective housing so that the ends of the clamp straps come
+           close to the hitch of the housing.
+
+
+
+
+            Illustration 14: Hitch on protective housing
+
+
+
+
+                                                            Illustration 15: Set MARWIS-UMB on
+                                                            protective housing
+
+           Press the clamp straps with a screw driver towards the protective housing until they catch the
+           hitch. Now the MARWIS-UMB is connected to the protective housing. First fasten one clamp
+           strap on both sides, then the other one.
+
+
+
+
+                                                                  Illustration 17: Fasten clamp straps
+                                                                  with a screw driver
+
+
+
+
+                Illustration 16: Fasten clamp straps
+                with a screw driver
+
+
+
+                                            Chapter 7, Mounting                                          23
+MARWIS-UMB                                                                      Operating Manual V 3.4
+
+
+
+
+                                                             Illustration 19: clamp straps latched
+
+
+
+
+        Illustration 18: Protective housing connected
+
+
+
+        Removing the MARWIS-UMB from the protective housing is easily done by again inserting a
+        screw driver into the ears of the clamp straps. By pressing outwards downwards the connection
+        can be opened.
+
+
+
+
+24                                     Chapter 7, Mounting
+Operating Manual V 3.4                                                                 MARWIS-UMB
+
+
+       7.4 Example: Mounting with magnetic bar carrier for horizontal installation and short
+           protective housing
+
+
+
+
+                            Illustration 20: Mounting on passenger car
+
+
+
+       7.5 Example: Mounting with magnetic bar carrier for vertical installation and long protective
+           housing
+
+
+
+
+                     Illustration 21: Vertical mounting (door of a van)
+
+
+
+
+                                          Chapter 7, Mounting                                      25
+MARWIS-UMB                                                                          Operating Manual V 3.4
+
+
+
+       8     Connections
+             The MARWIS-UMB housing is equipped with an 8-pole screw plug socket which serves for con-
+             necting the supply voltage and the RS485 interface. The connection cable has to be ordered
+             seperately in the desired length (5 or 15 meters / 49 ¼ ft or 16 ⅜ ft).
+
+
+       8.1 Connection plug
+
+
+
+
+           Ill. 22: 8-pole socket
+
+
+
+
+                                                           Ill 24: View on solder connection of the
+                                                           cable socket
+
+Ill. 23: Connection plug
+
+
+
+
+       8.2 Pin assignment
+
+             1    pink       CAN-HIGH
+             2    yellow     RS485_B
+             3    red
+             4    grey       CAN-LOW
+             5    green      RS485_A
+             6    blue
+             7    white      negative supply voltage
+             8    brown      positive supply voltage
+
+
+             Note: The shielding of the MARWIS-UMB connection cable has to be connected to the chassis
+             of the vehicle.
+
+
+             Note: The MARWIS-UMB has to be protected with a 5 A fuse
+
+
+
+
+26                                         Chapter 8, Connections
+Operating Manual V 3.4                                                                      MARWIS-UMB
+
+       8.3 Supply voltage
+
+           The sensor is powered by direct current voltage of 12 – 28 VDC.
+           With temperatures below -10°C (14 °F) and a power supply of 12V a 12v to 24Vstep up convert -
+           er should be used in order to allow for the necessary heating performance.
+
+
+       8.4 RS485-interface
+
+           The device is equipped with a half duplex 2 wire RS484 interface for configuration, measure-
+           ment retrieval and firmware update.
+           The MARWIS-UMB sampling rate can be adjusted in steps of 0.1 s to values between once per
+           0.1 s and once every 5 seconds. If the data are not retrieved more often than once per second
+           the bit rate of 19200 baud will usually be sufficient. If the sampling rate is higher than that a
+           baud rate of 115200 is recommended.
+
+
+       8.5 Bluetooth connection
+
+           For setting up a Bluetooth connection follow the instructions of the producer of the device to
+           which you want to connect the MARWIS-UMB (iPad, Windows-PC...)
+           Then look for your MARWIS-UMB in the Bluetooth settings. It will register with the first two sec-
+           tions of its serial number.
+           If you are using the UMB Config Tool select the COM port for communicating with the MARWIS-
+           UMB that has been assigned to your Bluetooth connection during the setup.
+
+
+
+
+                                         Chapter 8, Connections                                          27
+MARWIS-UMB                                                                           Operating Manual V 3.4
+
+
+
+     9   Commissioning
+
+     9.1 Adaption of the sensor
+
+         In order to prepare the sensor correctly for the conditions of the surface to be measured (road or
+         tarmac), the unit has to go through an adaptation procedure prior to commissioning.
+         To this end, the MARWIS-UMB has to be installed on the measuring vehicle in the planned posi -
+         tion. The adaption must take place on a dry piece of road and ist carried out on a stationary
+         vehicle, i.e. not while moving.
+         The road cover which is selected for the adaption should be representative for the area in which
+         the MARWIS-UMB is going to be used.
+         The ambient temperature should be lower than 30°C (86 °F). The adaption must not be carried
+         out in artificial light.
+         The measurement may contain errors, if the adaption has not been carried out correctly.
+         The profile of the adaption can be saved in the MARWIS-UMB. Up to 5 different profiles can be
+         stored.
+         During the adaption, basic settings are configured which depend on the structure of the ground,
+         the measuring angle and the exact measuring distance between the MARWIS-UMB and the
+         road. Therefore, when saving different profiles it makes sense to give them names which allow
+         conclusions on these conditions. E.g. mentioning the vehicle in the profile name can allow con -
+         clusions about the installation height during the adaption.
+
+
+     9.1.1 Possible reasons why an adaption may fail
+             •   The ambient temperature exceeds 30 °C (86 °F). In this case the LEDs may become to
+                 warm for carrying out a successful adaption.
+             •   The MARWIS-UMB had not been switched on long enough before the adaption was
+                 started. About 5 minutes of warm-up time is necessary.
+             •   The ground is not suitable for the adaption (too bright, too dark....)
+
+
+     9.2 Selecting the settings for the road condition model
+
+         The settings for the road condition model determine if the interpretation of the current conditions
+         is supposed to be subject to a rather optimistic, pessimistic or neutral point of view. Depending
+         on these settings the values which are selected for the next measurement retrieval will be either
+         the maximum, minimum or average values that have been measured.
+         Selecting the lowest measured road temperature in combination with the highest values of water
+         film and ice percentage on a trip in winter e.g. would correspond to a rather pessimistic point of
+         view which aims at showing the highest possible risk on a road section.
+         The values which are selected in the settings for the retrieval of the individual values, are also
+         the ones which are used for calculating road condition and friction.
+
+
+
+
+28                                    Chapter 9, Commissioning
+Operating Manual V 3.4                                                                           MARWIS-UMB
+
+                7 presets are available for selection:
+
+                      No.      Preset         Road temperature          Water film height   Ice Percentage
+                      0         AVG   5
+                                                    Average                 Average              Average
+                      1       Winter 1             Minimum                 Maximum               Maximum
+                      2       Winter 2              Average                 Average              Maximum
+                      3       Winter 3             Minimum                  Average              Maximum
+                      6       Winter 4             Minimum                  Average              Average
+                      4      Summer 1               Average                Maximum               Minimum
+                      5      Summer 2               Average                 Average              Minimum
+
+          9.2.1 Illustration of how the road condition is determined
+                While measuring MARWIS-UMB detects water film height and ice percentage with a frequency
+                of 100 Hz, i.e. one measured value every 10 ms. Some of these values are filtered out for the
+                suppression of disturbances (see chapter 16.2 page 40), the remaining were analysed
+                statistically (average, min and max values).
+                With a frequency of 10Hz, i. e. every 100ms, the road temperature is measured.
+
+
+
+
+                Illustration 25: Settings of the road condition model
+
+                For MARWIS-UMB the update rate (external measuring rate) can be set between 100ms and 1s
+                in 100ms steps. So with factory settings MARWIS-UMB calculates new output values every
+                100ms.
+                The averaging time can be configured via the 'number of measurements for averaging'. The
+                maximum number for averaging is 60 values.
+                If this value is set for example to 10 and the default update rate is used, MARWIS-UMB
+                averages over 10 100ms values, that is over 1 second.
+
+
+
+
+5   Factory setting
+
+
+                                             Chapter 9, Commissioning                                        29
+MARWIS-UMB                                                                           Operating Manual V 3.4
+
+             Sensor          min.                max.               min.
+                          update rate         update rate           step
+          MARWIS-       100ms (factory             1s              100ms
+           UMB             setting)
+
+     9.3 Important hints prior to commissioning
+
+         Please adhere to the following points:
+              •   Acquaint yourself with the functionality of the UMB-Config-Tool.Net and the MARWIS-
+                  App respectively.
+              •   Do not switch on the power supply before the installation has been completed.
+              •   Restarting the MARWIS-UMB after the adaption will not influence the measurements.
+                  The latest used adaption profile will be reloaded automatically.
+              •   In a vehicle with a stop-start system the cigarette lighter is usually left without power
+                  supply during the starting process. If the MARWIS-UMB receives its power supply from
+                  the cigarette lighter in such a car, it will in this case carry out a reset which may lead to
+                  data gaps.
+              •   If several MARWIS-UMB are used in the same network, each instrument must receive
+                  its own device ID.
+
+
+
+
+30                                      Chapter 9, Commissioning
+Operating Manual V 3.4                                                                                           MARWIS-UMB
+
+
+
+         10 Carrying out the sensor adaption
+
+         10.1 Adaption with the MARWIS-App
+
+               The adaption of the sensor can be carried out with the MARWIS-App on the iPad or Android
+               tablet PC or with the program ConfigTool.Net on Windows PC. The exact proceeding is
+               described in the manual / help of the respective app or program.
+
+
+         11 Configuration and test
+               Configuration can be done with the Windows® PC software ConfigTool.Net or with the apps for
+               Android tablet PC or ipad. The sensor can also be tested and the firmware updated with the aid
+               of this software.
+
+
+         11.1 Factory Settings
+
+               The sensor is deliverd with the following settings:
+               Class ID:........................................................10 (cannot be modified)
+               Device-ID:.....................................................1 (gives address A001h = 40961d)
+               Baud rate:......................................................19200
+               RS485 protocol:............................................UMB binary
+               Water film damp threshold:............................10 µm
+               Water film wet threshold:...............................100 µm
+               Critical temperature6......................................1,5 °C
+               Temperature offset........................................0K
+               Oberflächentyp..............................................asphalt
+               Measuring interval MARWIS-UMB................0,1 s
+               Deicer............................................................NaCl
+               Preset of the road condition model................average
+               Note: the device ID must be changed if several MARWIS-UMB are operated in one UMB net-
+               work since each device requires a unique ID. It makes sense to start from ID 1 and continue in
+               ascending order.
+               Note: Due to the strict master-slave principle no other bus participant must be used as a master
+               as long as the RS485 connection is active since the PC is taking over the master function.
+               Important note: If the baud rate is changed, after saving the configuration on the sensor, the
+               sensor communicates at the new baud rate. Please make sure that your retrieving system sup -
+               ports the changed baud rate.
+
+
+
+
+6   Below which ice is detected
+
+
+                                                 Chapter 11, Configuration and test                                      31
+MARWIS-UMB                                                                             Operating Manual V 3.4
+
+
+
+     12 Firmware Update
+         To keep the sensor in accordance with the latest state-of-the-art, it is possible to carry out a
+         firmrware update on site with no need to return the sensor to the manufacturer.
+
+
+     12.1 Update with the MARWIS-App or ConfigTool.Net
+
+         The proceeding of how to carry out a firmware update is described in the help function of the
+         MARWIS-App and the PC software ConfigTool.Net respectively.
+
+
+     13 Maintenance
+         Note: Make sure that the MARWIS-UMB is disconnected from power supply during
+         maintenance / cleaning!
+
+
+     13.1 Cleaning the sensor front glass pane
+
+         If the glass pane on the sensor front is soiled, clean it with a damp, wrung out cloth. Dry the
+         pane afterwards with a dry lint-free cloth.
+         Remove dust and dirt from the housing as well.
+         Don't use solvents like benzine, thinner, alcohol, kitchen cleaners etc. since these agents can
+         damage the housing and the optical parts.
+         If you use a chemical cleaning tissue, pay attention to the corresponding instructions.
+
+
+         Note: By no means use a pressure washer for cleaning the MARWIS-UMB.
+
+
+         Don't forget to take off your MARWIS-UMB before driving into a car wash.
+
+
+     13.2 Checking the bolted connections
+
+         Please check regularly if all screws and the clamp straps are still fitted tightly.
+
+
+
+
+32                                      Chapter 13, Maintenance
+Operating Manual V 3.4                                                                                                  MARWIS-UMB
+
+
+
+          14 Technical Data
+
+          14.1 Device
+
+                Power supply:                            10 – 28 V DC on the sensor
+                Power input:                             ca. 3 VA without heating, 50 VA with heating7
+                Protection class:                        IP68
+                Measuring distance                       8900.U03
+                                                         1 m / 3 ¼ ft tolerance: 0.80 m ...1.50 m / 31 ½ in...59 in
+                                                         8900.U04
+                                                         2 m / 6 ½ ft tolerance: 1.60 m ... 2,20 m / 63 in...86 ⅝ in
+                                                         8900.U05
+                                                         0.5m / 19 ¾ in tolerance: 0.35 ... 0.65m / 13 ¾ – 25 ½ in
+
+                Sensor dimensions                        height ca. 110 mm / 4 ⅜ in
+                                                         width ca. 200 mm / 7 ⅞ in
+                                                         depth ca. 100 mm / 3 ⅞ in
+                Sensor weight                            1.7 kg
+
+                Storage conditions
+                permissible temperature                           -40…+70 °C / -40….+158 °F
+                permissible rel. humidity                         0 … 95 % r.h. non-condensing
+                permissible height above sea level:               3000 m / 9,843 ft
+
+                Operating conditions
+                permissible ambient temperature                   -40 ... +60 °C / -40...+140 °F
+                permissible rel. humidity                         0 … 100 % r.h.
+
+                RS485 interface, 2 wire, half duplex
+                       Data bits                         8
+                        Stop bit                         1
+                       Parity                            none
+                       Tri-state                         2 bits after stop bit edge
+                       Adjustable baud rates             1200, 2400, 4800, 9600, 14400, 192008, 28800, 57600, 115200
+                       Sampling rate                     100 ms.... 5 s, adjustable in steps of 0.1 s 9 (MARWIS-UMB)
+
+                Bluetooth interface
+                Housing                                  aluminium, plastic
+                CAN interface
+
+
+
+
+7   With temperatures below -10 °C (14 °F) and a power supply of 12 V a 12 V to 24 V step up converter should be used in order to
+    allow for the necessary heating performance.
+8   Default setting and baud rate for firmware update
+9   For sampling rates up to 1/s a bit rate of 19200 baud will usually be sufficient; for higher sampling rates please select 115200 baud.
+
+
+                                                    Chapter 14, Technical Data                                                          33
+MARWIS-UMB                                                                                               Operating Manual V 3.4
+
+         14.2 Measuring Range / Accuracy
+
+
+         14.2.1 Road Surface Temperature
+               Principle                               optical
+               Measuring range                         -40°C...+70°C / -40….+158 °F
+               Accuracy                                0.8 K at 0°C / 1.44 °R at 32 °F
+               Resolution                              0.1 K / < 1.8 °R
+
+
+         14.2.2 Road Condition10
+               Value                                   Road state
+               0                                       dry
+               1                                       damp
+               2                                       wet
+               3                                       ice-covered
+               4                                       snow / ice-covered
+               5                                       chemically wet
+               6                                       water + ice
+               8                                       snow covered
+               99                                      undefined
+
+
+         14.2.3 Dew point temperature
+               Principle                               passive, calculated out of air temperature and humidity
+               Measuring range                         -50 °C … + 60 °C / -58 °F... 140 °F
+               Resolution                              0,1 K / < 1.8 °R
+
+
+         14.2.4 Water film
+               Principle                               optical
+               Measuring range                         0 - 6 mm / 0... 0.236 in
+               Resolution                              0.1 µm / < 4 mil
+               Precision                               ± 10 % at 0 … 6 mm water film height on sleek ground 11
+
+
+         14.2.5 Relative humidity at road temperature
+               Measuring principle                     passive, calculated out of absolute air humidity and road surface
+                                                       temperature
+               Measuring range                         0 … 100%
+               Resolution                              0.1 %
+
+
+
+10 The road condition model is subject to constant improvement. Please check regularly on the availability of firmware updates.
+11 Tests for checking the water film height can be carried out on even ground made from sleek not water absorbing material with a
+   minimum reflectivity of 0.5 i.e. 50% of the energy is being reflected. With a distance of 1 -2 m to the MARWIS-UMB the test ground
+   has to be at least 25 x 25 cm in size.
+
+
+34                                                Chapter 14, Technical Data
+Operating Manual V 3.4                                                                                                 MARWIS-UMB
+
+          14.2.6 Relative humidity
+                Measuring principle                      capacitvie
+                Measuring range                          0 … 100%
+                Resolution                               0.1 %
+                Precision                                3 % at 40 km/h (25 mph)12
+
+
+          14.2.7 Ambient temperature
+                Measuring principle                      NTC
+                Measuring range                          -40 … 70 °C
+                Resolution                               0,1 K
+                Precision                                ± 0,5 °C from 40 km/h (25 mph) on13
+
+
+          14.2.8 Friction
+                Measuring range                          0…1
+                Resolution                               0.01
+
+
+          14.2.9 Ice percentage
+                Measuring range                          0 … 100 %
+                Resolution                               1%
+
+
+          14.2.10         Snow Height
+                Measuring principle                      optical
+                Measuring range                          0 … 50 mm
+                Resolution                               0.01 mm
+
+
+
+
+12 In a stable state, i.e. the definite value has been reached and the environment conditions are not subject to strong variations as e.g.
+   when driving in a landscape with quick changes of wood and open space
+13 If the vehicle is standing still the sensor heating influences the temperature measurement
+
+
+                                                    Chapter 14, Technical Data                                                         35
+MARWIS-UMB                                                                Operating Manual V 3.4
+
+
+     14.3 Drawings
+
+
+     14.3.1 MARWIS-UMB with short protective housing
+
+
+
+
+                            Illustration 26: MARWIS-UMB with
+                            short protective housing
+
+
+
+
+                      Illustration 27: MARWIS-UMB with short protective
+                      housing
+
+
+
+
+36                                Chapter 14, Technical Data
+Operating Manual V 3.4                                                             MARWIS-UMB
+
+       14.3.2 MARWS-UMB with long protective housing
+
+
+
+
+                         Illustration 28: Long protective housing – lateral view
+
+
+
+
+                    Illustration 29: Long protective housing – back view
+
+
+
+
+                                         Chapter 14, Technical Data                        37
+MARWIS-UMB                                                                       Operating Manual V 3.4
+
+
+
+     15 Declaration of Conformity
+
+     15.1 EC Certificate of Conformity
+
+         Product:        Mobile Road Sensor
+         Type            MARWIS-UMB (Order No. 8900.Uxx)
+
+
+
+         We herewith certify that the above mentioned equipment complies in design and construction
+         with the below mentioned Directives of the European Union
+
+         2011/65/EU      RoHS-Directive
+
+         2014/53/EU      Radio Equipment Directives
+
+
+
+         Applied harmonised standard:
+
+         EN 50591:2010                    Technical Documentation
+
+         EN 62368-1                       Electrical Safety
+
+         EN 301489-17                     Electromagnetic Compatibility standard for radio equipment
+
+
+
+     15.2 FCC Compliance statement (US)
+
+         Product:        Mobile Road Sensor
+         Type            MARWIS-UMB (Order No. 8900.Uxx)
+
+
+
+         This device contains equipment with the FCC ID: PVH0946.
+
+         This device complies with part 15 of the FCC Rules.
+
+         Operation is subject to the following two conditions:
+         (1)     This device may not cause harmful interference, and
+         (2)     this device must accept any interference received, including interference that may
+                 cause undesired operation.
+         Changes and modifications not expressly approved by manufacturer could void the user’s
+         authority to operate the equipment.
+
+
+
+
+38                              Chapter 15, Declaration of Conformity
+Operating Manual V 3.4                                                                        MARWIS-UMB
+
+
+
+
+       15.3 IC Compliance statement (CA)
+
+           Product:       Mobile Road Sensor
+           Type           MARWIS-UMB (Order No. 8900.Uxx)
+
+
+
+           This device contains equipment with the IC ID: 5325A-0946.
+
+           This device complies with Industry Canada licence-exempt RSS standard(s). Operation is
+           subject to the following two conditions:
+           (1)     This device may not cause interference, and
+           (2)    this device must accept any interference received, including interference that may cause
+           undesired operation of the device.
+
+
+           Le présent appareil est conforme aux CNR d’Industrie Canada applicable aux appareils radio
+           exempts de licence. L’exploration est autorisée aux deux conditions suivantes:
+           (1)     l’appareil ne doit pas produire de brouillage, et
+           (2)     l’utilisateur de l’appareil doit accepter tout brouillage radioélectrique subi, même si le
+                   bouillage est susceptible d’en compromettre le fonctionnement.
+
+
+
+
+                                  Chapter 15, Declaration of Conformity                                    39
+MARWIS-UMB                                                                         Operating Manual V 3.4
+
+
+
+     16 Disturbances
+
+     16.1 Possible errors occurring on the MARWIS-UMB
+
+          Error descriptions                        Cause / remedy
+          Device does not allow polling or does         •    Check status-LED
+          not respond                                   •    Check supply voltage
+                                                        •    Check interface connection
+                                                        •    incorrect device-ID → check ID; devices are
+                                                             deliverd with ID 1.
+          Device delivers implausible values            •    Check status-LED
+                                                        •    Check for compliance with the sensor
+                                                             installation instructions
+                                                        •    Has the device been commissioned
+                                                             correctly? Repeat if necessary
+                                                        •    Has the correct adaption profile been
+                                                             selected?
+          Device transmits error value 2bH (43d)    Error in measurement; value cannot be detrermined
+          Device transmits error value 24h (36d)    A channel was requested that is not available on this
+                                                    device.
+          Device transmits error value 28h (40d)    Device is in initialization phase after start-up → wait
+                                                    until first measurement is complete
+          Device transmits error value 31h (49d)    Faulty adaption; carry out an adaption on
+                                                    representative dry ground
+          Device transmits error value 50h (80d)    Device is being operated above the specified
+                                                    measuring range.
+          Device transmits error value 51h (81d)    Device is being operated below the specified
+                                                    measuring range.
+          Device transmits error value 55h (85d)    The device is unable to execute a valid measurement
+                                                    due to the ambient conditions.
+          Device transmits an error value which is There may be several reasons for this behaviour →
+          not listed here.                         contact the manufacturer's technical support team.
+
+     16.2 Interfering factors which can influence the measurement result
+
+         ●   Lengthwise oriented road markings, tarmac seams
+             Due to their longitudinal orientation these disturbances can adopt an all but static character.
+             Disturbances from road markings which lie crosswise towards the direction of travel are
+             noted shorter when running over them and can therefore be filtered out for the resulting
+             value.
+         ●   Tunnel lighting
+         ●   Longer persisting disturbances (like road markings, tarmac seams, manhole covers....) due
+             to the vehicle not moving
+         ●   Extreme rainfall
+         ●   Cast shadow (in sunny weather, shadow e.g. from trees, quick alternation between sunny
+             and shady locations)
+         ●   Heat from exhaust fumes
+
+
+40                                    Chapter 16, Disturbances
+Operating Manual V 3.4                                                                          MARWIS-UMB
+
+           ●   Dirt on the MARWIS-UMB front glass pane, e.g. due to spume on wet roads
+           ●   Very dark road surface (new blacktop – MARWIS-UMB)
+
+
+       17 Disposal
+
+       17.1 Within the EU
+
+           The device must be disposed of in accordance with European Directives 2002/96/EC and
+           2003/108/EC (waste electrical and electronic equipment). Waste equipment must not be
+           disposed of as household waste! For environmentally sound recycling and the disposal of your
+           waste equipment please contact a certified electronic waste disposal company.
+
+
+       17.2 Outside the EU
+
+           Please comply with the applicable regulations for the proper disposal of waste electrical and
+           electronic equipment in your respective country.
+
+
+       18 Repair / Corrective Maintenance
+           Please arrange for any faulty equipment to be checked and, if necessary, repaired by the
+           manufacturer exclusively. Do not open the equipment and do not under any circumstances
+           attempt to carry out your own repairs.
+           In the event of a repair please contact:
+           OTT HydroMet Fellbach GmbH
+           Gutenbergstraße 20
+           70736 Fellbach
+           Germany
+
+           Phone: +49 711 51822-0
+           Hotline: +49 711 51822-52
+           Fax: +49 711 51822-41
+           E-Mail: met-info@otthydromet.com
+
+           Or your local distributor.
+
+
+       18.1 Technical Support
+
+           Our hotline is available for technical questions via the following e-mail address:
+           met-support@otthydromet.com
+           You can also consult frequently asked questions at www.lufft.com
+           (menu header: Support → FAQs).
+
+
+
+
+                               Chapter 18, Repair / Corrective Maintenance                              41
+MARWIS-UMB                                                                                  Operating Manual V 3.4
+
+
+
+         19 Appendix
+
+         19.1 Channel List Summary
+
+               The channel assignment described here applies to online data requests in UMB protocol
+
+                       UMB Channel                                                              Measuring Range
+                 act    Min     Max     avg           Measurement Variable (float32)            Min       Max    unit
+                Road surface temperature
+                100                                       Road surface temperature          -40.0     70.0      °C
+                105                                       Road surface temperature          -40.0     158.0     °F
+                Dew point temperature
+                120                                         Dew point temperature           -50.0     60.0      °C
+                125                                         Dew point temperature           -58.0     140.0     °F
+                Relative humidity at road temperature
+                200                                Relative humidity at road temperature    0.0       100.0     %
+                Water film height
+                600                                             Water film height           0.0       6000.0 µm
+                605                                             Water film height           0.0       78.7      mil
+                610                                             Water film height           0.0       6.0       mm
+                                                     14
+                Water film height on surface
+                601                                       Water film height on surface      0.0       6000.0 µm
+                606                                       Water film height on surface      0.0       78.7      mil
+                611                                       Water film height on surface      0.0       6.0       mm
+                Snow height
+                612                                               Snow height               0.0       50.0      mm
+                Road condition
+                                                                                            0    dry
+                                                                                            1    damp
+                                                                                            2    wet
+                                                                                            3    ice-covered
+                900                                        Road condition (uint8)           4    snow-/ice-covered
+                                                                                            5    chemically wet
+                                                                                            6    water + ice
+                                                                                            8    snow-covered
+                                                                                           99    undefined
+                Ice percentage
+                800                                              Ice percentage             0.0       100.0     %
+                Friction
+                820                                                  Friction               0.0       1.0       none
+                Device status
+                4000                                                                        0         1
+14 Channels 601, 606 and 611 do no consider the water in the pores of the road surface.
+
+
+42                                                  Chapter 19, Appendix
+Operating Manual V 3.4                                                                             MARWIS-UMB
+
+            Bit 0         RESERVED
+                                                   0     Supply voltage in range
+            Bit 1         Supply voltage status
+                                                   1     Low voltage detected
+                                                   0     Flash OK
+            Bit 2         Flash status
+                                                   1     Error on reading / writing to onboard flash
+                                                   0     NIR measurement OK
+            Bit 3         NIR status                     Error in NIR measurement
+                                                   1
+                                                         (see UMB Channel 4001 for details)
+                                                   0     Pyro measurement OK
+            Bit 4         Pyro status
+                                                   1     Error in pyrometer measurement
+                                                   0     TFF (t/h.r.) measurement OK
+            Bit 5         TFF status
+                                                   1     Error in TFF (t/h.r.) measurement
+                                                   0     Internal heater temp. measurement OK
+                          Heater temperature
+            Bit 6                                        Error measuring heater temperature
+                          measurement status       1
+                                                         (Heating will be disabled)
+                                                   0     RS485 communication OK
+            Bit 7         RS485 status
+                                                   1     Error in RS485 communication
+                                                   0     Bluetooth module up and running
+            Bit 8         Bluetooth status
+                                                   1     Error on Bluetooth communication
+            Bit 9 - 31    RESERVED
+
+            Measurement status
+            4001                                                                        0        1
+                                                   0     Device temperature in operating range
+            Bit 0         Operating temperature
+                                                   1     Invalid operating temperature (status LED: orange)
+                                                   0     NIR measurement OK
+            Bit 1         NIR timeout
+                                                   1     Timeout error during NIR measurement
+                                                   0     Monitor measurement OK
+            Bit 2         Monitor error
+                                                   1     Error at monitor measurement (LED defective)
+                                                   0     NIR value OK
+            Bit 3         NIR measured value
+                                                   1     NIR value invalid
+            Bit 4 – 7     RESERVED
+                                                   0     Adjustment profile valid
+                          Invalid adjustment
+            Bit 8                                        Invalid adjustment profile selected; WFH measurement
+                          profile                  1
+                                                         impossible
+            Bit - - 30    RESERVED
+                                                   0     No error
+            Bit 31        General error
+                                                   1     Unspecified, general error
+
+
+       19.2 Communication in binary protocol
+
+           Only one example of an online data request is described in this operating manual. Please refer
+           to the current version of the UMB protodol for all commands and the exact operation mode of
+           the protocol (available for download at www.lufft.com)
+
+
+
+
+                                             Chapter 19, Appendix                                             43
+MARWIS-UMB                                                                                    Operating Manual V 3.4
+
+                Note: Communication with the sensor takes place in accordance with the master-slave principle,
+                i.e. there must only be ONE requesting unit in a network.
+
+
+         19.2.1 Framing
+                The data frame is constructed as follows:
+                                                                            11… (8 + len)             10 + len
+     1      2          3-4     5-6        7        8        9        10                     9 + len            12 + len
+                                                                              optional                11+ len
+SOH      <ver>       <to>    <from>    <len>    STX     <cmd>      <verc> <payload>         ETX       <cs>     EOT
+
+
+                SOH                   Control character for the start of a frame (01h); 1 byte
+                <ver>                 Header version number, e.g.V 1.0 <ver> = 10h = 16d; 1 byte
+                <to>                  Receiver address , 2 bytes
+                <from>                Sender address, 2 bytes
+                <len>                 Number of data bytes between STX and ETX; 1 byte
+                STX                   Control character for the start of payload transmission (02h); 1 byte
+                <cmd>                 Command; 1 byte
+                <verc>                Version number of the command; 1 byte
+                <payload>             data bytes; 0 – 210 bytes
+                ETX                   Cotrol character for the end of payload transmission (03h); 1 byte
+                <cs>                  Check sum, 16 bit CRC; 2 bytes
+                EOT                   Control character for the end of the frame (04h); 1 byte
+                Control characters:            SOH (01h), STX (02h), ETX (03h), EOT (04h).
+
+
+         19.2.2 Addressing with Class and Device ID
+                Addressing takes place by way of a 16 bit address. This breaks down into a Class ID and a
+                Device ID.
+
+
+                Address (2 bytes = 16 bit)
+                bits 15 – 12 (upper 4 bits)               bits 11 – 8                bits 7 – 0 (lower 8 bits)
+                                                          (middle 4 bits)
+                Klassen-ID (0 bis 15)                     Reserve                    Geräte-ID (0 - 255)
+                0        Broadcast                                                   0                  Broadcast
+                10       Mobile road sensor                                          1 – 255            Available
+
+
+                15       Master or control devices
+
+
+                ID = 0 is provided as broadcast for classes and devices. Thus it is possible to transmit a broad-
+                cast on a specific class. However, this only makes sense if there is only one device of the re -
+                spective class on the bus, or in case of a command, e.g. reset.
+
+
+
+
+44                                                Chapter 19, Appendix
+Operating Manual V 3.4                                                                      MARWIS-UMB
+
+
+       19.2.3 Example for creating addresses
+           If e.g. a MARWIS-UMB shall be addressed with Device ID 001 this works as follows:
+           Class ID for MARWIS-UMB is 10d = Ah
+           Device ID is e.g. 001d = 01h
+           By putting together the class ID and the device ID the resulting address is A001h = (40961d)
+
+
+       19.2.4 Example online data query
+           Recording of a binary request with “online data query” (23h) as an example for retrieving the
+           current road surface temperature (channel 100)
+           Request            23h10h[<channel>²]
+           <channel>²         designates the channel number
+           Response           23h10h[00h, <channel>², <type>,<value>n]
+            <type>            designates the data type of the output; the length of <value> depends on it
+                     n
+           <value>            the requested value
+           Comment: The specifications of the channel numbers, which are needed for transmission as
+           well as the transferred value and its format can be found in the device description.
+
+
+           Request
+           01 10 01 A0 01 F0 04 02 23 10 64 00 03 BE F8 04
+           Response
+           01 10 01 F0 01 A0 0A 02 23 10 00 64 00 16 C3 D8 C2 41 03 BA 2C 04
+
+
+           Interpretation of the response:
+           <status>           = 00h device ok. ( 00h is an error code)
+           <channel>²         0064h = 100d = road surface temperature
+            <type>            = 16h = float (4 byes, IEEE format)
+           <value>n           = 41C2D8C3h = 2.43558406829834E+0001 = 24,36°C
+
+
+
+
+                                          Chapter 19, Appendix                                              45
+MARWIS-UMB                                                                            Operating Manual V 3.4
+
+
+     19.2.5 Example online data query multiple channels
+         Recording of a binary request with “online data query multiple channels” (2Fh) for reading the
+         current road surface temperature (channel 100) and road condition (channel 900) = 2 channels
+         Request             2Fh10h[<number>,<channel>2 x <number>]
+
+         <number>            number of the requested channels
+         <channel>       2
+                             designates the channel numbers; channel 100 and channel 900
+         Response            2Fh10h[00h, <number>, {<sub-len>, 00h, <channel>2, <type>, <value>n<number>}]
+
+         <sub-len>           designates the number of bytes following in this sub-telegram; if the subsequent
+                             status byte displays, for example 'Value Overflow', <type> and <value> n are
+                             omitted and the next channel follows
+         <type>              designates the data type of the output; the length of <value> depends on it
+         <value>     n
+                             the requested value
+         Comment: The specifications of the channel numbers, which are needed for transmission as
+         well as the transferred values and their formats can be found in the device description. A
+         maximum of 20 channels can be requested.
+
+
+         Request
+         01 10 01 A0 01 F0 07 02 2F 10 02 64 00 84 03 03 C1 26 04
+         Response
+         01 10 01 F0 01 A0 13 02 2F 10 00 02 08 00 64 00 16 CB 3D A5 41 05 00 84 03 10 01 03 3F 77
+         04
+
+
+     19.2.6 Example online data query multiple channels V1.1
+         Description: This command allows to poll several channels with one call. For each channel one
+         sub-telegram is delivered. A new feature is that there are 2 request telegrams for this call. In the
+         first one (1st call) the requested channels are defined and stored internally, with the other one
+         (from the 2nd call on) the channels which were requested in the first call are delivered again. The
+         answers are identical on both calls. The second call is recommended if the same values are
+         requested again and again at a high measuring frecuency.
+         1st Call
+         Request                2Fh11h [<number>, <channel>2 x <number>]
+
+         <number>               number of the requested channels
+         <channel>2             gibt die Kanalnummern an
+                    nd
+         From 2 call on:
+         Request                2Fh11h 00h
+
+         Response:              2Fh11h [00h, <number>, {<sub-len>, 00h, <channel>², <type>,
+                                <value>n}<number>]
+         <number>               number of channels requested in the 1st call
+         <sub-len>              designates the number of bytes following in this sub-telegram; if the sub-
+                                sequent status byte displays, for example 'Value Overflow', <type> and
+                                <value>n are omitted and the next channel follows
+         <type>                 designates the data type of the output; the length of <value> depends on it
+
+46                                           Chapter 19, Appendix
+Operating Manual V 3.4                                                MARWIS-UMB
+
+           <value>n          requested value
+
+
+           Example: Retrieval of 3 measurement values
+
+
+           Channel 100 (0064h): Road temperature in °C
+           Channel 600 (0258h): water film height in µm
+           Channel 900 (0384h): Road condition
+
+
+           1st Request:
+           01 10 01 A0 00 F0 09 02 2F 11 03 64 00 58 02 84 03 03 69 24 04
+
+
+           Response:
+           01 10 00 F0 01 A0 1C 02 2F 11 00 03 08 00 64 00 16 8F BB AA 41 08 00 58
+           02 16 57 97 E1 42 05 00 84 03 10 00 03 D8 1A 04
+
+
+           Subsequent requests:
+           01 10 01 A0 00 F0 03 02 2F 11 00 03 24 29 04
+
+
+           Response:
+           01 10 00 F0 01 A0 1C 02 2F 11 00 03 08 00 64 00 16 5D 67 AD 41 08 00 58
+           02 16 D1 D1 E1 42 05 00 84 03 10 00 03 BD 25 04
+
+
+
+
+                                        Chapter 19, Appendix                   47
+MARWIS-UMB                                                                             Operating Manual V 3.4
+
+
+     19.3 CAN Protocol (Version 1.0)
+
+
+     19.3.1 General remarks
+         All Marwis measuring channels can communicate over the CAN interface. Each value will be
+         sent in its own CAN telegram.
+         In order to transfer a measured value it is either possible to send a remote telegram which will
+         cause the value to be transferred once or to configure a trigger so that the value is sent
+         automatically time and time again. In this latter case the system will check once every 10 ms if a
+         value is supposed to be transferred. The configured triggers of the CAN data transmisison are
+         stored permanently, i.e. need to be configured only once when commissioning a MARWIS-UMB.
+         Each end of the CAN bus should be terminated by a 120 Ohm resistance.
+
+
+     19.3.2 Pin assignment
+         Pin assignment of the CAN interface on the 8 pole screw plug socket
+         Pin 1: CAN-High
+         Pin 4: CAN-Low
+
+
+     19.3.3 CAN-Parameter
+         The bitrate is 500 kBps.
+         Extended CAN-IDs (EID) are used.
+
+
+     19.3.4 Data format and byte order in the communication protocol
+         LONG:         LowLowByte LowHighByte HighLowByte HighHighByte
+         INT:          LowByte HighByte
+         FLOAT:        Acc. to IEEE format (4bytes)
+
+
+     19.3.5 Data transmission
+
+
+     19.3.5.1 CAN-ID
+         Every value will have its own CAN ID. The default values correspond to the UMB value
+         numbers. Since extended CAN IDs are used, the IDE bit is set in addition.
+
+
+         Examples:
+          Value                       Value number     11 Bit       IDE   18 Bit        RTR   CAN-ID
+                                      (dez. / hex)     Identifier         Identifier          (extended)
+                                                       (hex)              (hex)
+          Road temperature in °C      100d = 0x0064h   0x000        1     0x00064       0     0x00000064
+          Water film height in µm     600d = 0x0258h   0x000        1     0x00258       0     0x00000258
+          Road state                  900d = 0x0384h   0x000        1     0x00384       0     0x00000384
+
+
+
+
+48                                        Chapter 19, Appendix
+Operating Manual V 3.4                                                                               MARWIS-UMB
+
+
+       19.3.5.2 Transmission format
+           The first data byte contains a status byte (see chapter 19.3.8) which indicates if a valid value is
+           available. If the status is not OK no more data will follow.
+           If the status is OK (0x00h) it will be followed by the second data byte which specifies the data
+           type in which the value is released (see chapter 19.3.9).
+           Depending on the data type 1 – 4 byte with measured values will follow from the third data byte
+           on.
+           Examples:
+            11 Bit     IDE 18 Bit     RTR    Data            Data byte (hex)                    Description
+            Identifier     Identifier        Length
+                                                        1           2      3-6
+            (hex)          (hex)             Code
+                                                      Status       Typ   Messwert
+            0x000        1   0x00064   0     1        0x54     -                    Road temperature:
+                                                                                    no valid value
+            0x000        1   0x00258   0     6        0x00     0x16 0x00 0x00       Water film heigh is 0
+                                                                    0x00 0x00
+            0x000        1   0x00384   0     3        0x00     0x10 0x01            Road state: 1 (humid)
+
+
+
+
+       19.3.6 Remote Query
+           Marwis supports remote value queries. Following the CAN specifications the CAN ID
+           corresponds to the CAN ID which is used for transmitting the corresponding value with
+           additionally set RTR bit.
+           The required value is transferred instantly one time only.
+
+
+           Examples:
+            Value                      Value number      11 Bit          IDE   18 Bit       RTR     CAN-ID
+                                       (dez. / hex)      Identifier            Identifier           (extended)
+                                                         (hex)                 (hex)
+            Road temperature in °C     100d = 0x0064h    0x000           1     0x00064      1       0x00000064
+
+            Water film height in µm    600d = 0x0258h    0x000           1     0x00258      1       0x00000258
+            Road state                 900d = 0x0384h    0x000           1     0x00384      1       0x00000384
+
+
+
+
+       19.3.7 Configuration of a trigger
+           If a value is supposed to be transferred several times, a trigger can be configured which defines
+           under which circumstances the value is supposed to be sent. Every value can have a trigger of
+           its own.
+           In the default settings no values will be transferred.
+
+
+       19.3.7.1 CAN-ID
+           The configuration of every value trigger has its own CAN ID. The default settings correspond to
+           the CAN IDs of the value transfer with additionally set lowest value bit of the 11 bit identifier.
+
+
+
+
+                                            Chapter 19, Appendix                                                 49
+MARWIS-UMB                                                                                            Operating Manual V 3.4
+
+         Examples:
+
+
+          Value                         Value number            11 Bit           IDE     18 Bit        RTR   CAN-ID
+                                        (dez. / hex)            Identifier               Identifier          (extended)
+                                                                (hex)                    (hex)
+          Road temperature in °C        100d = 0x0064h          0x001            1       0x00064       0     0x00040064
+
+          Water film height in µm       600d = 0x0258h          0x001            1       0x00258       0     0x00040258
+          Road state                    900d = 0x0384h          0x001            1       0x00384       0     0x00040384
+
+
+         To get the CAN-ID:
+         The CAN-ID is set together by 18 bit + 11 bit identifier. Example road temperature:
+                            11 Bit              18 Bit
+                    binär       0 0000 0000 01 00 0000 0000 0110 0100
+
+           hexadezimal          0x00      0x04           0x00        0x64
+
+
+     19.3.7.2 Trigger format
+         The first data byte of the trigger telegram indicates the trigger type. Depending on the type there
+         will be possible parameters that are indicated from the 2 nd data byte on.
+             Trigger          Data             Data byte (hex)                                   Parameter
+                             Length
+                                         1                 2–5               Data type                        Description
+                              Code
+                                        Type             Parameter
+          none              1          0x00       -                          -                                -
+          time              5          0x01       4 Byte                     unsigned long                    Intervall in ms
+          difference        1          0x02       -                          -                                -
+          minimum           2-5        0x03       1 – 4 Byte                 Same as value                    Limit value
+          maximum           2-5        0x04       1 – 4 Byte                 Same as value                    Limit value
+
+
+         Trigger type = 0:
+         In case no trigger is specified the corresponding value will not be transferred.
+
+
+         Trigger type = 1:
+         The time trigger will have the value transferred in the specified interval. Take into account that
+         the trigger check takes place only once every 10 ms so that it makes sense to specify an interval
+         which is a multiple of 10 ms. Other intervals will be brought up to a round figure, e.g. a specified
+         interval of 111 ms will lead to a value transfer every 120 ms.
+
+
+         Trigger type = 2:
+         The trigger “difference“ will have the value transferred each time the current value differs from
+         the previous one. This trigger only makes sense for measuring data whose value changes
+         rarely, e.g. system states.
+
+
+         Trigger type = 3:
+
+
+50                                            Chapter 19, Appendix
+Operating Manual V 3.4                                                                                MARWIS-UMB
+
+           Trigger type = 4:
+           The triggers “miniumum” and “maximum” will have the corresponding value transferred only if it
+           exceeds or falls below the specified limit value. The limit value has to be described in the same
+           data format and with the same unit that are used for the transfer of the measured value.
+           Examples:
+            11 Bit     IDE 18 Bit     RTR Data            Data byte (hex)                     Description
+            Identifier     Identifier     Length
+                                                    1            2–5
+            (hex)          (hex)          Code
+                                                   Typ         Parameter
+            0x001       1    0x00064   0   1       0x00                          The road temperature is not
+                                                                                 transmitted (any more)
+                                                                                 Die Fahrbahntemperatur wird nicht
+                                                                                 (mehr) übertragen
+            0x001       1    0x00258   0   5       0x01 0x64 0x00                The water film height is
+                                                        0x00 0x00                transmitted once every 100 ms
+                                                                                 (100d = 0x64h)
+            0x001       1    0x00384   0   1       0x02                          The road state is transmitted each
+                                                                                 time its value changes
+
+
+       19.3.8 Status and error codes
+           Each value telegram contains a status byte which indicates if the transmitted value is ok or
+           which error in the device prevents the value from being detected / transmitted.
+           Codes:
+
+            <status>        Define                 Description
+            00h (0d)        OK                     Kommando successful, no error
+
+
+            24h (36d)       UNGLTG_KANAL           Invalid channel; CAN ID not assigned to any channel
+
+            28h (40d)       BUSY                   Device not ready, e.g. initialising, calibrating
+            29h (41d)       LOW_VOLTAGE            Undervoltage
+
+            2Ah (42d)       HW_ERROR               Hardware error
+
+            2Bh (43d)       MEAS_ERROR             Error in the measurement
+            2Ch (44d)       INIT_ERROR             Error in the device initialisation
+            2Dh (45d)       RTOS_ERROR             Error in the operating system
+
+
+            30h (48d)       E2_DEFAULT_KONF        Error in the configuration. Defautl configuration was loaded.
+
+            31h (49d)       E2_CAL_ERROR           Error in the adjustment / the adjustment is invalid. No
+                                                   measurement possible.
+            32h (50d)       E2_CRC_KONF_ERR        CRC error when loading the configuration. Default
+                                                   configuration was loaded.
+            33h (51d)       E2_CRC_KAL_ERR         CRC error when loading               the   adjustment    data;   no
+                                                   measurement possible.
+
+            34h (52d)       ADJ_STEP1              Adjustment step 1
+            35h (53d)       ADJ_OK                 Adjustment OK
+            36h (54d)       KANAL_AUS              Channel deactivated
+
+
+
+                                           Chapter 19, Appendix                                                     51
+MARWIS-UMB                                                                             Operating Manual V 3.4
+
+          <status>       Define                    Description
+
+
+          50h (80d)      VALUE_OVERFLOW            Measured value (+Offset) are out of the specified range.
+          51h (81d)      VALUE_UNDERFLOW
+          52h (82d)      CHANNEL_OVERRANGE         Measured value (physically) is out of the measuring range
+                                                   (e.g. ADC overrange)
+          53h (83d)      CHANNEL_UNDERRANGE
+
+          54h (84d)      DATA_ERROR                Data error in the measured values or no valid data available.
+          55h (85d)      MEAS_UNABLE               Device / sensor cannot carry out a valid measurement due to
+                                                   ambient conditions.
+
+
+          F0h - FEh      Do not use!!              Reserved range e.g. for z.B. LCOM
+          FFh (255d)     UNBEK_ERR                 Unknown error
+
+
+
+
+     19.3.9 Data types
+         This protocol uses the following data types for the measured values:
+          <type>         Type Name        Define             Bytes    Range
+          10h (16d)      unsigned char    UNSIGNED_CHAR      1        0 ... 255
+          11h (17d)      signed char      SIGNED_CHAR        1        -128 ... 127
+          12h (18d)      unsigned short   UNSIGNED_SHORT     2        0 ... 65.535
+          13h (19d)      signed shor      SIGNED_SHORT       2        -32.768 ... 32.767
+          14h (20d)      unsigned long    UNSIGNED_LONG      4        0 ... 4.294.967.295
+          15h (21d       signed long      SIGNED_LONG        4        -2.147.483.648 ... 2.147.483.647
+          16h (22d)      float            FLOAT              4        ±1.18E-38 ... ±3.39E+38 (7 digits)
+          17h (23d)      double           DOUBLE             8        ±2.23E-308 ... ±1.79E+308 (15 digits)
+
+         Remark: float and double in IEEE format
+
+
+
+
+52                                         Chapter 19, Appendix
+Operating Manual MARWIS-UMB                                                          English
+
+
+
+
+© OTT HydroMet Fellbach GmbH, Fellbach, Germany. Subject to change without notice.
+

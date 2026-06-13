@@ -1,0 +1,138 @@
+Technical Data
+MARWIS - Mobile Advanced Road Weather Information Sensor
+
+
+
+
+MARWIS is the first road and runway weather sensor detecting road
+conditions, temperatures, friction and other parameters mobile and in
+real time from driving vehicles.
+
+          Parameters measured
+          Road condition (dry, moist, wet, ice, snow, slush, chemically wet), road surface
+          temperature, ambient temperature, water film height up to 6mm, dew point
+          temperature, relative humidity, ice percentage, friction (calculated)
+
+          Measurement technology
+          Optical LED transmitters, photo receivers, pyrometer, infrared
+
+          Product highlights
+          Mobile, plug and play, 100 measurements per second with max. output rate of 10Hz,
+          multifunctional, real time thermal mapping, wireless data transfer
+
+          Interfaces
+          Bluetooth, RS485, CAN-Bus
+
+          Article number
+          8900.U03, 8900.U04
+
+The mobile road weather sensor MARWIS turns vehicles into driving weather stations by
+detecting several critical road and runway weather parameters. It can be installed on
+vehicles with a distance of 1 - 2m above the surface and delivers information about
+temperatures, waterfilm heights, dew points, road conditions (dry, moist, wet, snow, ice), ice
+percentages, rel. humidity and friction with a frequency of up to 100 times per second and a
+max. output rate of 10 Hz. It serves as an important decision support with regard to
+preventive gritting. Due to the open interface protocols, MARWIS can be easily integrated
+Page 1
+Technical modifications and errors excepted - Created 06/05/2024
+G. Lufft Mess- und Regeltechnik GmbH Fellbach, Deutschland
+Technical Data
+MARWIS - Mobile Advanced Road Weather Information Sensor
+
+
+
+into existing winter maintenance monitoring networks. Similarly, the mobile road sensor can
+communicate directly with the control system on gritting vehicles. The measurement data
+output supports the protocol UMB binary.
+
+General
+Dimensions                                           Height approx. 110 mm, width approx. 200 mm, depth approx. 100
+                                                     mm
+Weight                                               1.7 kg
+Admissible storage temperature                       -40...70 °C
+Operating rel. humidity                              <95 % relative humidity non-condensing
+Operating voltage                                    10...28 VDC on the sensor
+Power consumption                                    Approx. 3VA without heating, 50VA with heating
+Operating temperature                                -40...60 °C
+Operating rel. humidity                              0...100 % RH
+Protection type                                      IP68
+Surface conditions                                   Dry, damp, wet, snow-/ice-covered, chemically wet, slush
+Admissible height above                              3000 m
+absolute altitude
+Interface                                            RS485, 2 wire, half duplex, bluetooth, CAN
+
+Road surface temperature
+Principle                                            Optical
+Measuring range                                      -40...70 °C
+Unit                                                 °C
+Accuracy                                             ± 0.8 °C @ 0 °C
+Resolution                                           0.1 °C
+
+Ambient temperature
+Measuring range                                      -50...70 °C (°F switchable)
+Unit                                                 °C (°F switchable)
+Resolution                                           0.1 °C
+
+Relative air humidity
+Measuring range                                      0...100 %
+Unit                                                 %
+Resolution                                           1%
+Principle                                            passive, calculated out of air temperature and humidity
+
+Relative humidity above road
+surface
+Measuring range                                      0 ... 100 %
+Unit                                                 %
+Resolution                                           0.1 %
+Principle                                            passive, calculated out of air temperature and humidity above
+                                                     road surface
+
+
+
+Page 2
+Technical modifications and errors excepted - Created 06/05/2024
+G. Lufft Mess- und Regeltechnik GmbH Fellbach, Deutschland
+                                   Technical Data
+                                   MARWIS - Mobile Advanced Road Weather Information Sensor
+
+
+
+                                   Dew point temperature
+                                   Measuring range                                      -50 ... 60 °C
+                                   Unit                                                 °C
+                                   Resolution                                           0.1 °C
+                                   Principle                                            passive, calculated out of air temperature and humidity
+                                   Accuracy                                             1.5 °C @ temperature of 0...35 °C
+
+                                   Water film height
+                                   Principle                                            Optical
+                                   Measuring range                                      0 ... 6000 µm
+                                                                                        Max. WFH is only achieved with concrete underground. For
+                                                                                        asphalt, the maximum measurable water film height is smaller
+                                                                                        and depends on the distance to the ground.
+                                   Unit                                                 µm
+                                   Resolution                                           1 µm
+                                   Accuracy                                             10%
+                                   Snow depth                                           up to 50 mm
+
+                                   Ice Percentage
+                                   Measuring range                                      0 ... 100 %
+                                   Unit                                                 %
+                                   Resolution                                           1%
+
+                                   Friction
+                                   Measuring range                                      0...1
+                                   Resolution                                           0.01
+
+
+
+
+                                   Page 3
+                                   Technical modifications and errors excepted - Created 06/05/2024
+                                   G. Lufft Mess- und Regeltechnik GmbH Fellbach, Deutschland
+
+
+
+
+Powered by TCPDF (www.tcpdf.org)
+
