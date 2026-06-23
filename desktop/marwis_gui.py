@@ -38,8 +38,13 @@ from marwis_logger import (
 # Output lands in the repo's data/ folder regardless of the working directory it's
 # launched from (script-relative, like marwis_monitor.DEFAULT_DB). Each recording
 # session gets its own UTC-timestamped file so runs never overwrite or mix.
-DATA_DIR = os.path.normpath(
-    os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data"))
+if getattr(sys, "frozen", False):
+    # PyInstaller bundle: write next to the .exe, not into the temp _MEIPASS dir
+    # that the one-file build extracts to and deletes on exit.
+    DATA_DIR = os.path.join(os.path.dirname(sys.executable), "data")
+else:
+    DATA_DIR = os.path.normpath(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data"))
 
 
 def session_db_path():

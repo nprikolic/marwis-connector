@@ -1,0 +1,38 @@
+name: Build Windows exe
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:  # allow manual runs to test the build without tagging
+
+permissions:
+  contents: write  # needed to attach the exe to a Release
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt pyinstaller
+
+      - name: Build exe
+        run: pyinstaller desktop/marwis_gui.spec
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MarwisLogger
+          path: dist/MarwisLogger.exe
+
+      - name: Attach exe to Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/MarwisLogger.exe

@@ -43,6 +43,20 @@ android/                 parked Android app
 data/                    SQLite outputs (marwis.sqlite, …)
 ```
 
+## Download (Windows .exe)
+
+Don't want to install Python? Grab **`MarwisLogger.exe`** from the
+[Releases page](https://github.com/nprikolic/marwis-connector/releases) — a single
+self-contained file, no Python needed. Double-click to run the GUI logger.
+
+Recordings land in a `data/` folder created **next to the exe**, so keep the exe
+somewhere you can write (e.g. its own folder, not `Program Files`). As in the GUI,
+location is logged separately on your phone and joined by UTC timestamp afterward.
+
+The build is unsigned, so on first launch Windows SmartScreen shows *"Windows
+protected your PC"* — click **More info → Run anyway**. (You still need the sensor
+paired and its COM port known — see Setup below.)
+
 ## Findings from the documentation
 
 ### How the sensor communicates
@@ -196,6 +210,13 @@ python desktop/marwis_gui.py
 A single Tkinter window — the graphical equivalent of `marwis_monitor.py`,
 reusing all of `marwis_logger.py`'s protocol and storage logic (no
 reimplementation). It starts **monitoring only — not saving**.
+
+Prefer a standalone binary? See **Download** above, or build it yourself from the
+repo root: `pip install -r requirements.txt pyinstaller` then
+`pyinstaller desktop/marwis_gui.spec` — the exe appears at `dist/MarwisLogger.exe`.
+The committed [`desktop/marwis_gui.spec`](desktop/marwis_gui.spec) and the
+[`build-exe`](.github/workflows/build-exe.yml) GitHub Actions workflow (which
+attaches the exe to a Release on every `v*` tag) keep this reproducible.
 
 - **Connection row** — enter the COM port (default `COM5`) and poll interval
   (default `1.0` s), then **Connect**; a status pill shows Connected/Disconnected.
