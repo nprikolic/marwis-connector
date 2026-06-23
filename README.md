@@ -30,6 +30,7 @@ desktop/                 Python tools
   marwis_monitor.py        live monitor + on-demand saving (console)
   marwis_gui.py            lean Tkinter GUI logger (live monitor + save toggle)
   merge_gps.py             join a phone GPS track onto a run by UTC timestamp
+  plot_track.py            plot a georeferenced run on an OpenStreetMap base map
   capture.py               one-shot labelled fixture capture
   discover_channels.py     enumerate device channels (UMB 0x2D)
   test_marwis_logger.py    offline protocol tests (documented frame vectors)
@@ -255,6 +256,30 @@ dependencies. `direction_deg` uses the nearest sample (angles wrap at 0/360); al
 other fields are linearly interpolated. A laptop sleep during the run shows up as
 a stretch of polls with no MARWIS data while the phone track continues — the GUI's
 keep-awake (above) prevents this.
+
+## Plotting a run on a map
+
+Render a georeferenced run (the `_geo.csv` from `merge_gps.py`) on an
+OpenStreetMap base map:
+
+```
+python desktop/plot_track.py --geo data/marwis_..._geo.csv
+```
+
+It writes a self-contained interactive HTML map — `<geo>_map.html` by default —
+with the GPS track drawn as points over OSM tiles (Leaflet), coloured by a chosen
+measurement, a click-popup of the readings at each point, and a legend. Colour by
+any column:
+
+```
+--color road_surface_temp   numeric -> cold→hot gradient (default)
+--color friction
+--color road_condition       categorical -> manual's channel-900 code palette
+--out PATH                   output HTML (default: <geo>_map.html)
+```
+
+Stdlib only — no folium/matplotlib. Leaflet and the OSM tiles load from CDN/OSM,
+so **viewing needs an internet connection**.
 
 ## Storage schema (extensible for georeferencing)
 
