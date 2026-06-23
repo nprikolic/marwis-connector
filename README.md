@@ -29,6 +29,7 @@ desktop/                 Python tools
   marwis_logger.py         unattended/always-on logger (UMB protocol + storage)
   marwis_monitor.py        live monitor + on-demand saving (console)
   marwis_gui.py            lean Tkinter GUI logger (live monitor + save toggle)
+  merge_gps.py             join a phone GPS track onto a run by UTC timestamp
   capture.py               one-shot labelled fixture capture
   discover_channels.py     enumerate device channels (UMB 0x2D)
   test_marwis_logger.py    offline protocol tests (documented frame vectors)
@@ -205,7 +206,12 @@ reimplementation). It starts **monitoring only — not saving**.
   raw value is still stored — see `docs/reference/captures/README.md`).
 - **Record** — toggles saving on/off without dropping the link. Turning it on
   pops a reminder to start location logging on your phone (the laptop has no GPS;
-  `lat`/`lon` stay NULL and you join on the UTC timestamp afterward).
+  `lat`/`lon` stay NULL and you join on the UTC timestamp afterward). While a
+  recording is active the laptop is kept from sleeping (Windows
+  `SetThreadExecutionState`, released on Stop) — otherwise the OS suspends the
+  poll thread and the run gets a multi-minute hole. The *display* may still turn
+  off, and closing the lid still sleeps the machine (a separate Windows power
+  setting), so keep the lid open during a run.
 
 **Per-session files:** each Record session writes its own UTC-timestamped SQLite
 file in `data/` — `marwis_YYYYMMDD_HHMMSSZ.sqlite` — so runs never overwrite or
@@ -213,6 +219,42 @@ mix. Tick **Also write CSV** to additionally write a matching `.csv` alongside
 it. The folder is created on first record. Architecture: a daemon worker thread
 owns the serial port and poll loop; the Tk thread drains a queue and does all
 widget/SQLite work, so serial I/O never blocks the UI.
+
+## Merging a phone GPS track
+
+The laptop has no GPS, so position is logged separately on a phone (the
+[Sensor Logger](https://www.tszheichoi.com/sensorlogger) app exports a `.zip`
+with a `Raw Data.csv` + `meta/time.csv`) and joined to a run afterward on the
+shared UTC timestamp:
+
+```
+python desktop/merge_gps.py \
+    --marwis data/marwis_YYYYMMDD_HHMMSSZ.csv \
+    --gps    "Location GPS ....zip"
+```
+
+GPS fixes (~1 Hz) are **linearly interpolated** onto each MARWIS poll (denser,
+~4–8 Hz). The output is a single wide, GIS-ready CSV — `<marwis>_geo.csv` by
+default — with one row per poll: `ts_utc`, position/motion columns (`lat, lon,
+altitude_m, speed_mps, direction_deg, horiz_acc_m, satellites`), then one column
+per channel. The tool prints a coverage summary (polls georeferenced, lat/lon
+bbox). Options:
+
+```
+--out PATH        output path (default: <marwis>_geo.csv next to the input)
+--clock-offset S  seconds added to GPS times, to correct a constant phone↔laptop
+                  clock skew (the join is only as good as the two clocks' sync)
+--max-gap S       don't interpolate across GPS gaps longer than this (default 5s);
+                  such polls get blank position
+```
+
+`--gps` reads the Sensor Logger `.zip` directly (it needs `meta/time.csv` for the
+absolute-time anchor: `START` system epoch + relative `Time (s)`), or an already
+extracted `Raw Data.csv` with a sibling `meta/time.csv`. Stdlib only — no extra
+dependencies. `direction_deg` uses the nearest sample (angles wrap at 0/360); all
+other fields are linearly interpolated. A laptop sleep during the run shows up as
+a stretch of polls with no MARWIS data while the phone track continues — the GUI's
+keep-awake (above) prevents this.
 
 ## Storage schema (extensible for georeferencing)
 
