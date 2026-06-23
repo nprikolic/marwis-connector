@@ -22,6 +22,7 @@ import datetime
 import os
 import queue
 import sqlite3
+import sys
 import threading
 import time
 import tkinter as tk
@@ -73,6 +74,26 @@ REMINDER = ("Location is logged separately on your phone (laptop has no GPS) —
 def fmt_dur(seconds: float) -> str:
     s = int(seconds)
     return f"{s // 3600:02d}:{(s % 3600) // 60:02d}:{s % 60:02d}"
+
+
+def set_keep_awake(active: bool):
+    """Prevent (active) or allow (not active) system sleep. Windows-only; no-op elsewhere.
+
+    If the laptop sleeps mid-recording the poll thread is suspended and the run
+    gets a multi-minute hole. ES_SYSTEM_REQUIRED stops the OS sleeping while a
+    recording is active but still lets the display turn off; clearing it (passing
+    ES_CONTINUOUS alone) restores normal idle-sleep behaviour.
+    """
+    if sys.platform != "win32":
+        return
+    import ctypes
+    ES_CONTINUOUS = 0x80000000
+    ES_SYSTEM_REQUIRED = 0x00000001
+    flags = ES_CONTINUOUS | (ES_SYSTEM_REQUIRED if active else 0)
+    try:
+        ctypes.windll.kernel32.SetThreadExecutionState(flags)
+    except (AttributeError, OSError):
+        pass
 
 
 class PollWorker(threading.Thread):
@@ -148,7 +169,7 @@ class MarwisGui:
         top = ttk.Frame(self.root)
         top.pack(fill="x", padx=10, pady=(10, 4))
         ttk.Label(top, text="Port").pack(side="left")
-        self.port_var = tk.StringVar(value="COM5")
+        self.port_var = tk.StringVar(value="COM4")
         ttk.Entry(top, textvariable=self.port_var, width=8).pack(side="left", **pad)
         ttk.Label(top, text="Interval (s)").pack(side="left")
         self.interval_var = tk.StringVar(value="1.0")
@@ -256,6 +277,7 @@ class MarwisGui:
                     "in UTC — you'll match by time afterward.\n\nBegin recording?"):
                 return
             self._open_storage()
+            set_keep_awake(True)  # don't let the laptop sleep mid-recording
             self.saving = True
             self.saved_rows = 0
             self.save_started = time.monotonic()
@@ -267,6 +289,7 @@ class MarwisGui:
 
     def _stop_saving(self):
         self.saving = False
+        set_keep_awake(False)  # allow normal idle-sleep again
         self._close_storage()
         self.record_btn.config(text="● Record")
         self.rec_indicator.config(text=f"idle — {self.saved_rows} rows saved", fg="#9e9e9e")
@@ -369,6 +392,7 @@ class MarwisGui:
         if self.worker is not None:
             self.worker.stop()
             self.worker.join(timeout=3.0)
+        set_keep_awake(False)
         self._close_storage()
         self.root.destroy()
 
